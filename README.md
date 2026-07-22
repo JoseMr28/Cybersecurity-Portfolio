@@ -42,8 +42,8 @@ Every assessment follows a structured penetration testing methodology:
 
 | Machine | Platform | Difficulty | Status |
 |----------|----------|------------|--------|
-| Vaccine | Hack The Box | Easy | ✅ |
 | DC-1 | VulnHub | Beginner | ✅ |
+| Vaccine | Hack The Box | Easy | ✅ |
 
 ---
 
