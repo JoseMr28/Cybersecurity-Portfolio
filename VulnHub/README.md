@@ -50,7 +50,7 @@
 
 ## Reports
 
-- 📄 [Executive Report](./reports/DC1_Executive_Report.pdf)
+- 📄 [Executive Report](DC1_Executive_Report.pdf)
 
 - 📄 [Technical Report](./reports/DC1_Technical_Report.pdf)
 
