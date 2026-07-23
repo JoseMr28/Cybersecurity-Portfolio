@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Mon Jul 13 12:50:35 2026 as: /usr/lib/nmap/nmap -v -Pn -n -&#45;reason -oX Vaccine_FTP_Fingerprinting -&#45;script=ftp* -p 21 10.129.93.97 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -v -Pn -n -&#45;reason -oX Vaccine_FTP_Fingerprinting -&#45;script=ftp* -p 21 10.129.93.97" start="1783961435" startstr="Mon Jul 13 12:50:35 2026" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="21"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1783961435"/>
+<taskend task="NSE" time="1783961435"/>
+<taskbegin task="SYN Stealth Scan" time="1783961435"/>
+<taskend task="SYN Stealth Scan" time="1783961435" extrainfo="1 total ports"/>
+<taskbegin task="NSE" time="1783961435"/>
+<taskprogress task="NSE" time="1783961466" percent="25.00" remaining="94" etc="1783961559"/>
+<taskprogress task="NSE" time="1783961496" percent="25.00" remaining="184" etc="1783961679"/>
+<taskprogress task="NSE" time="1783961526" percent="25.00" remaining="274" etc="1783961799"/>
+<taskprogress task="NSE" time="1783961556" percent="25.00" remaining="364" etc="1783961919"/>
+<taskprogress task="NSE" time="1783961586" percent="25.00" remaining="454" etc="1783962039"/>
+<taskprogress task="NSE" time="1783961616" percent="25.00" remaining="544" etc="1783962159"/>
+<taskprogress task="NSE" time="1783961646" percent="25.00" remaining="634" etc="1783962279"/>
+<taskprogress task="NSE" time="1783961676" percent="25.00" remaining="724" etc="1783962399"/>
+<taskprogress task="NSE" time="1783961706" percent="25.00" remaining="814" etc="1783962519"/>
+<taskprogress task="NSE" time="1783961736" percent="25.00" remaining="904" etc="1783962639"/>
+<taskprogress task="NSE" time="1783961766" percent="25.00" remaining="994" etc="1783962759"/>
+<taskprogress task="NSE" time="1783961796" percent="25.00" remaining="1084" etc="1783962879"/>
+<taskprogress task="NSE" time="1783961826" percent="25.00" remaining="1174" etc="1783962999"/>
+<taskprogress task="NSE" time="1783961856" percent="25.00" remaining="1264" etc="1783963119"/>
+<taskprogress task="NSE" time="1783961886" percent="25.00" remaining="1354" etc="1783963239"/>
+<taskprogress task="NSE" time="1783961919" percent="25.00" remaining="1452" etc="1783963371"/>
+<taskprogress task="NSE" time="1783961952" percent="25.00" remaining="1552" etc="1783963503"/>
+<taskprogress task="NSE" time="1783961988" percent="25.00" remaining="1660" etc="1783963647"/>
+<taskprogress task="NSE" time="1783962027" percent="25.00" remaining="1776" etc="1783963803"/>
+<taskend task="NSE" time="1783962035"/>
+<host starttime="1783961435" endtime="1783962035"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.93.97" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" method="table" conf="3"/><script id="ftp-brute" output="&#xa;  Accounts: No valid accounts found&#xa;  Statistics: Performed 3649 guesses in 600 seconds, average tps: 5.9"><elem key="Accounts">No valid accounts found</elem>
+<elem key="Statistics">Performed 3649 guesses in 600 seconds, average tps: 5.9</elem>
+</script><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to ::ffff:10.10.15.23&#xa;     Logged in as ftpuser&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 4&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to ::ffff:10.10.15.23&#xa;     Logged in as ftpuser&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 4&#xa;     vsFTPd 3.0.3 - secure, fast, stable&#xa;End of status</elem>
+</script><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;-rwxr-xr-x    1 0        0            2533 Apr 13  2021 backup.zip"/></port>
+</ports>
+<times srtt="36965" rttvar="36965" to="184825"/>
+</host>
+<taskbegin task="NSE" time="1783962035"/>
+<taskend task="NSE" time="1783962035"/>
+<runstats><finished time="1783962035" timestr="Mon Jul 13 13:00:35 2026" summary="Nmap done at Mon Jul 13 13:00:35 2026; 1 IP address (1 host up) scanned in 600.40 seconds" elapsed="600.40" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

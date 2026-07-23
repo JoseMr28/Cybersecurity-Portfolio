@@ -1,27 +1,49 @@
 
 # Vaccine
 
+![Platform](https://img.shields.io/badge/Platform-Hack%20The%20Box-orange)
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-green)
+![OS](https://img.shields.io/badge/OS-Linux-blue)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+
+---
+
+## Machine Overview
+
 | Property | Value |
 |----------|-------|
 | Platform | Hack The Box |
-| Category | Web |
+| Operating System | Linux |
 | Difficulty | Easy |
-| Status | ✅ Completed |
+| Category | Web Application / Linux |
+| Status | Completed |
 
 ---
 
 ## Overview
 
-Vaccine is an Easy-rated Hack The Box machine focused on web application security, SQL injection, PostgreSQL interaction, and Linux privilege escalation.
+Vaccine is an Easy-rated Hack The Box machine that focuses on web application security, SQL injection, PostgreSQL database interaction, and Linux privilege escalation. The assessment emphasizes manual enumeration, vulnerability validation, exploitation, and post-exploitation activities while documenting findings in a professional penetration testing format.
+
+---
+
+## Assessment Objectives
+
+- Identify exposed network services.
+- Enumerate web application functionality.
+- Discover and validate security vulnerabilities.
+- Obtain an initial foothold.
+- Escalate privileges to administrative access.
+- Document the assessment findings and remediation recommendations.
 
 ---
 
 ## Skills Practiced
 
 - Information Gathering
-- Network Enumeration
+- Service Enumeration
 - FTP Enumeration
 - Web Enumeration
+- Vulnerability Assessment
 - SQL Injection
 - Database Enumeration
 - PostgreSQL
@@ -31,26 +53,56 @@ Vaccine is an Easy-rated Hack The Box machine focused on web application securit
 
 ---
 
-## Reports
+## Tools Used
 
-- 📄 Executive Report
-- 📄 Technical Report
+- Nmap
+- FTP
+- Burp Suite
+- Gobuster
+- sqlmap
+- John the Ripper
+- Netcat
+- python 3
+- vi
 
 ---
 
-## Artifacts
+## Reports
 
-The **artifacts** directory contains the original files generated during the assessment, including:
+## Reports
 
-- Network scans
-- Enumeration results
-- Exploitation evidence
-- Screenshots
-- Command outputs
-- Supporting documentation
+- 📄 [Executive Report](reports/Executive_Report.pdf)
+
+- 📄 [Technical Report](reports/Technical_Report.pdf)
+
+---
+
+## Supporting Artifacts
+
+## Supporting Artifacts
+
+The supporting evidence collected during the assessment is available in the **artifacts** directory.
+
+📁 [Browse Artifacts](artifacts/)
+---
+
+## Repository Structure
+
+```text
+Vaccine/
+├── README.md
+├── reports/
+│   ├── Executive_Report.pdf
+│   └── Technical_Report.pdf
+└── artifacts/
+    ├── scans/
+    ├── exploits/
+    ├── evidence/
+    └── credentials/
+```
 
 ---
 
 ## Disclaimer
 
-This assessment was performed exclusively in an authorized laboratory environment for educational and professional development purposes.
+This assessment was performed exclusively in an authorized laboratory environment provided by Hack The Box for educational and professional development purposes.

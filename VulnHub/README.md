@@ -1,19 +1,23 @@
-# VulnHub
+
 
 # DC-1
+
+![Platform](https://img.shields.io/badge/Platform-VulnHub-blue)
+![Difficulty](https://img.shields.io/badge/Difficulty-Beginner-brightgreen)
+![OS](https://img.shields.io/badge/OS-Linux-orange)
+![Status](https://img.shields.io/badge/Status-Completed-success)
+
+---
+
+## Machine Overview
 
 | Property | Value |
 |----------|-------|
 | Platform | VulnHub |
 | Operating System | Linux |
 | Difficulty | Beginner |
-| Status | ✅ Completed |
-
----
-
-## Overview
-
-DC-1 is a beginner-friendly Linux penetration testing laboratory that focuses on web application security, enumeration, privilege escalation, and post-exploitation.
+| Category | Linux |
+| Status | Completed |
 
 ---
 
@@ -23,7 +27,6 @@ DC-1 is a beginner-friendly Linux penetration testing laboratory that focuses on
 - Network Enumeration
 - Web Enumeration
 - Vulnerability Assessment
-- SQL Injection
 - Credential Discovery
 - Linux Privilege Escalation
 - Post-Exploitation
@@ -31,40 +34,35 @@ DC-1 is a beginner-friendly Linux penetration testing laboratory that focuses on
 
 ---
 
+## Tools Used
+
+- Nmap
+- curl
+- whatweb
+- Gobuster
+- Searchsploit
+- Metasploit
+- MySQL client
+
+---
+
 ## Reports
 
-- 📄 Executive Report
-- 📄 Technical Report
+## Reports
+
+- 📄 [Executive Report](reports/Executive_Report.pdf)
+
+- 📄 [Technical Report](reports/Technical_Report.pdf)
 
 ---
 
-## Artifacts
+## Supporting Artifacts
 
-The **artifacts** directory contains the original evidence collected during the assessment, including:
+## Supporting Artifacts
 
-- Network scans
-- Enumeration results
-- Exploitation artifacts
-- Command outputs
-- Screenshots
-- Supporting documentation
+The supporting evidence collected during the assessment is available in the **artifacts** directory.
 
----
-
-## Repository Structure
-
-```text
-DC-1/
-├── README.md
-├── reports/
-│   ├── Executive_Report.pdf
-│   └── Technical_Report.pdf
-└── artifacts/
-    ├── scans/
-    ├── exploits/
-    ├── evidence/
-    └── credentials/
-```
+📁 [Browse Artifacts](artifacts/)
 
 ---
 
