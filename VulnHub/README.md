@@ -50,9 +50,9 @@
 
 ## Reports
 
-- 📄 [Executive Report](reports/DC1_Executive_Report.pdf)
+- 📄 [Executive Report](./reports/DC1_Executive_Report.pdf)
 
-- 📄 [Technical Report](reports/DC1_Technical_Report.pdf)
+- 📄 [Technical Report](./reports/DC1_Technical_Report.pdf)
 
 ---
 
@@ -62,7 +62,7 @@
 
 The supporting evidence collected during the assessment is available in the **artifacts** directory.
 
-📁 [Browse Artifacts](artifacts/)
+📁 [Browse Artifacts](./artifacts/)
 
 ---
 
