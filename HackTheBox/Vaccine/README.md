@@ -68,10 +68,11 @@ Vaccine is an Easy-rated Hack The Box machine that focuses on web application se
 ---
 
 ## Reports
-
 ## Reports
+
 - 📄 [Executive Report](./reports/Vaccine_Executive_Report.pdf)
 - 📄 [Technical Report](./reports/Vaccine_Technical_Report.pdf)
+
 ---
 
 ## Supporting Artifacts

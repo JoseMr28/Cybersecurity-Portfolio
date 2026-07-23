@@ -53,10 +53,6 @@
 - 📄 [Technical Report](./reports/DC1_Technical_Report.pdf)
 
 
----
-
-## Supporting Artifacts
-
 ## Supporting Artifacts
 
 The supporting evidence collected during the assessment is available in the **artifacts** directory.
