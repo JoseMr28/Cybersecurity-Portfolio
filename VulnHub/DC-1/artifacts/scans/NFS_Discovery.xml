@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Wed May 27 14:00:32 2026 as: /usr/lib/nmap/nmap -v -Pn -n -&#45;reason -oA NFS_Discovery -sV -p 111 -&#45;script NFS-* 192.168.64.135 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -v -Pn -n -&#45;reason -oA NFS_Discovery -sV -p 111 -&#45;script NFS-* 192.168.64.135" start="1779904832" startstr="Wed May 27 14:00:32 2026" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="111"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<runstats><finished time="1779904832" timestr="Wed May 27 14:00:32 2026" summary="Nmap done at Wed May 27 14:00:32 2026; 0 IP addresses (0 hosts up) scanned in 0.05 seconds" elapsed="0.05" exit="error" errormsg="NSE: failed to initialize the script engine:&#xa;/usr/share/nmap/nse_main.lua:829: &apos;NFS-*&apos; did not match a category, filename, or directory&#xa;stack traceback:&#xa;&#x9;[C]: in function &apos;error&apos;&#xa;&#x9;/usr/share/nmap/nse_main.lua:829: in local &apos;get_chosen_scripts&apos;&#xa;&#x9;/usr/share/nmap/nse_main.lua:1364: in main chunk&#xa;&#x9;[C]: in ?&#xa;"/><hosts up="0" down="0" total="0"/>
+</runstats>
+</nmaprun>
