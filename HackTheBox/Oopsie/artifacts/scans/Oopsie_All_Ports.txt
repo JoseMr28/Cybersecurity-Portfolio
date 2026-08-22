@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Thu Jul 23 15:13:46 2026 as: /usr/lib/nmap/nmap -v -Pn -n -&#45;reason -oX Oopsie_All_Ports -p- 10.129.113.41 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -v -Pn -n -&#45;reason -oX Oopsie_All_Ports -p- 10.129.113.41" start="1784834026" startstr="Thu Jul 23 15:13:46 2026" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="SYN Stealth Scan" time="1784834026"/>
+<taskprogress task="SYN Stealth Scan" time="1784834057" percent="11.57" remaining="237" etc="1784834294"/>
+<taskprogress task="SYN Stealth Scan" time="1784834102" percent="25.57" remaining="222" etc="1784834323"/>
+<taskprogress task="SYN Stealth Scan" time="1784834132" percent="34.81" remaining="199" etc="1784834330"/>
+<taskprogress task="SYN Stealth Scan" time="1784834162" percent="43.69" remaining="176" etc="1784834337"/>

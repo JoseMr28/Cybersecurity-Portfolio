@@ -1,0 +1,8 @@
+/js                  [36m (Status: 301)[0m [Size: 309][34m [--> http://megacorp.com/js/][0m
+/images              [36m (Status: 301)[0m [Size: 313][34m [--> http://megacorp.com/images/][0m
+/css                 [36m (Status: 301)[0m [Size: 310][34m [--> http://megacorp.com/css/][0m
+/themes              [36m (Status: 301)[0m [Size: 313][34m [--> http://megacorp.com/themes/][0m
+/uploads             [36m (Status: 301)[0m [Size: 314][34m [--> http://megacorp.com/uploads/][0m
+/fonts               [36m (Status: 301)[0m [Size: 312][34m [--> http://megacorp.com/fonts/][0m
+/server-status       [33m (Status: 403)[0m [Size: 277]
+/cdn-cgi             [36m (Status: 301)[0m [Size: 314][34m [--> http://megacorp.com/cdn-cgi/][0m
