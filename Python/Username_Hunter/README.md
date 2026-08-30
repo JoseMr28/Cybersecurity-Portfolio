@@ -2,7 +2,7 @@
 
 ![Status](https://img.shields.io/badge/Status-In%20Development-orange)
 
-![Version](https://img.shields.io/badge/Version-v0.2-blue)
+![Version](https://img.shields.io/badge/Version-v0.1-blue)
 
 ![Python](https://img.shields.io/badge/Python-3.x-yellow)
 
