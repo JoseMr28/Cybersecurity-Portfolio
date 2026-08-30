@@ -31,7 +31,7 @@ The main objectives of Username Hunter are:
 
 # Current Version
 
-**Version:** `v0.2`
+**Version:** `v0.1`
 
 The current version implements the basic username enumeration workflow.
 
@@ -146,7 +146,7 @@ The tool is now ready to use.
 
 # Technologies
 
-| Technology | Purpose |
+| Technology | Purpose
 |---|---|
 | Python 3.x | Main programming language |
 | `argparse` | Command-line argument parsing |
@@ -255,9 +255,8 @@ Once the functionality has been implemented and tested, the version is reviewed 
 
 | Version | Description | Status |
 |:-------:|---|:------:|
-| `v0.1` | Initial project structure and command-line argument handling | ✅ Completed |
-| `v0.2` | Multiple social media platforms, URL generation, HTTP requests and basic result interpretation | 🚧 Current |
-| `v0.3` | Improved result presentation and additional functionality | 🔲 Planned |
+| `v0.1` | Multiple social media platforms, URL generation, HTTP requests and basic result interpretation | 🚧 Current |
+| `v0.2` | Improved result presentation and additional functionality | 🔲 Planned |
 | `v1.0` | Stable release | 🔲 Planned |
 
 The project uses Git for version control, allowing previous development stages to be tracked through commits and version tags.
