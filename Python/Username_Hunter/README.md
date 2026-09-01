@@ -2,7 +2,7 @@
 
 ![Status](https://img.shields.io/badge/Status-In%20Development-orange)
 
-![Version](https://img.shields.io/badge/Version-v0.1-blue)
+![Version](https://img.shields.io/badge/Version-v0.2-blue)
 
 ![Python](https://img.shields.io/badge/Python-3.x-yellow)
 
@@ -31,7 +31,7 @@ The main objectives of Username Hunter are:
 
 # Current Version
 
-**Version:** `v0.1`
+**Version:** `v0.2`
 
 The current version implements the basic username enumeration workflow.
 
@@ -82,6 +82,7 @@ Show Results
   │
   ▼
 End
+```
 
 ---
 
@@ -103,8 +104,54 @@ Username_Hunter/
 │
 ├── requirements.txt
 └── README.md
+```
 
----
+### `src/`
+
+Contains the Python source code.
+
+#### `main.py`
+
+Responsible for:
+
+- Command-line argument parsing using `argparse`.
+- Receiving the username and selected social media platforms.
+- Creating the `UsernameHunter` object.
+- Calling the methods that make up the application workflow.
+
+#### `username_hunter.py`
+
+Contains the `UsernameHunter` class and the main functionality of the application.
+
+Current methods include:
+
+- `build_url()` — Builds the URLs corresponding to the selected social media platforms.
+- `build_request()` — Performs HTTP requests and stores the resulting status codes.
+- `show_results()` — Displays and interprets the collected results.
+
+### `docs/`
+
+Contains the design and development documentation.
+
+#### `flowchart/`
+
+Contains the flowcharts used to represent the application's logic and workflow.
+
+#### `pseudocode/`
+
+Contains the pseudocode created before implementation and updated as the project evolves.
+
+### `requirements.txt`
+
+Contains the external Python dependencies required by the project.
+
+The current version uses:
+
+```text
+requests
+```
+
+Python standard library modules such as `argparse` do not need to be included in this file.
 
 ---
 
@@ -146,7 +193,7 @@ The tool is now ready to use.
 
 # Technologies
 
-| Technology | Purpose
+| Technology | Purpose |
 |---|---|
 | Python 3.x | Main programming language |
 | `argparse` | Command-line argument parsing |
@@ -255,8 +302,8 @@ Once the functionality has been implemented and tested, the version is reviewed 
 
 | Version | Description | Status |
 |:-------:|---|:------:|
-| `v0.1` | Multiple social media platforms, URL generation, HTTP requests and basic result interpretation | 🚧 Current |
-| `v0.2` | Improved result presentation and additional functionality | 🔲 Planned |
+| `v0.2` | Multiple social media platforms, URL generation, HTTP requests and basic result interpretation | 🚧 Current |
+| `v0.3` | Improved result presentation and additional functionality | 🔲 Planned |
 | `v1.0` | Stable release | 🔲 Planned |
 
 The project uses Git for version control, allowing previous development stages to be tracked through commits and version tags.
