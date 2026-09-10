@@ -2,7 +2,7 @@
 
 ![Status](https://img.shields.io/badge/Status-In%20Development-orange)
 
-![Version](https://img.shields.io/badge/Version-v0.2-blue)
+![Version](https://img.shields.io/badge/Version-v0.3-blue)
 
 ![Python](https://img.shields.io/badge/Python-3.x-yellow)
 
@@ -31,9 +31,9 @@ The main objectives of Username Hunter are:
 
 # Current Version
 
-**Version:** `v0.2`
+**Version:** `v0.3`
 
-The current version implements the basic username enumeration workflow.
+The current version implements the basic username enumeration workflow with structured terminal output using the Rich library.
 
 ### Current Features
 
@@ -44,14 +44,19 @@ The current version implements the basic username enumeration workflow.
 - HTTP `GET` requests using the `requests` library.
 - Storage of URLs and HTTP status codes in a dictionary.
 - Basic interpretation of HTTP responses.
-- Command-line result output.
+- Structured terminal output using Rich.
+- Formatted results displayed in a table.
+- HTTP status code color classification.
 
 HTTP status codes are currently interpreted as:
 
-| Status Code | Result |
-|:-----------:|:------:|
-| `200` | ✅ Found |
-| Other | ❌ Not Found |
+| Status Code | Result | Color |
+|:-----------:|:------:|:-----:|
+| `200` | Found | 🟢 Green |
+| `300–399` | Not Found | 🟡 Yellow |
+| `400+` | Not Found | 🔴 Red |
+
+> **Note:** The current detection method is based primarily on HTTP response status codes. Some platforms may use redirects, anti-bot mechanisms, authentication requirements, rate limiting, or other response behaviors that can affect the accuracy of username detection.
 
 ---
 
@@ -76,6 +81,9 @@ Build URL
   │
   ▼
 Build Request
+  │
+  ▼
+Analyze Response
   │
   ▼
 Show Results
@@ -126,8 +134,8 @@ Contains the `UsernameHunter` class and the main functionality of the applicatio
 Current methods include:
 
 - `build_url()` — Builds the URLs corresponding to the selected social media platforms.
-- `build_request()` — Performs HTTP requests and stores the resulting status codes.
-- `show_results()` — Displays and interprets the collected results.
+- `build_request()` — Performs HTTP requests and stores the resulting URLs and status codes.
+- `show_results()` — Displays and interprets the collected results using Rich.
 
 ### `docs/`
 
@@ -149,6 +157,7 @@ The current version uses:
 
 ```text
 requests
+rich
 ```
 
 Python standard library modules such as `argparse` do not need to be included in this file.
@@ -198,6 +207,7 @@ The tool is now ready to use.
 | Python 3.x | Main programming language |
 | `argparse` | Command-line argument parsing |
 | `requests` | HTTP requests |
+| `rich` | Formatted output |
 | Dictionaries | Platform configuration and result storage |
 | Object-Oriented Programming | Application structure |
 | Git | Version control |
@@ -230,15 +240,27 @@ python3 src/main.py -u JohnDoe -s Github Instagram
 ### Example Output
 
 ```text
-https://www.github.com/user/JohnDoe:404: Not found
-https://www.instagram.com/user/JohnDoe:200: Found
+                                Username Hunter
+
+┏━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Platform  ┃ Status ┃  Result   ┃ URL                                    ┃
+┡━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│  github   │  200   │   Found   │ https://github.com/JohnDoe              │
+│ instagram │  200   │   Found   │ https://www.instagram.com/JohnDoe      │
+│ onlyfans  │  403   │ Not Found │ https://www.onlyfans.com/JohnDoe        │
+│  tiktok   │  403   │ Not Found │ https://www.tiktok.com/@JohnDoe        │
+└───────────┴────────┴───────────┴────────────────────────────────────────┘
 ```
 
 The application currently evaluates the HTTP response status code returned by each requested URL.
 
 A `200` response is interpreted as `Found`.
 
-Other status codes are currently interpreted as `Not Found`.
+Responses in the `300–399` range are interpreted as `Not Found` and displayed in yellow.
+
+Responses with a status code of `400` or higher are interpreted as `Not Found` and displayed in red.
+
+> **Note:** This interpretation is part of the current development version and may be improved in future versions to account for platform-specific response behavior.
 
 ---
 
@@ -302,8 +324,9 @@ Once the functionality has been implemented and tested, the version is reviewed 
 
 | Version | Description | Status |
 |:-------:|---|:------:|
-| `v0.2` | Multiple social media platforms, URL generation, HTTP requests and basic result interpretation | 🚧 Current |
-| `v0.3` | Improved result presentation and additional functionality | 🔲 Planned |
+| `v0.1` | Initial username enumeration workflow | ✅ Completed |
+| `v0.2` | Multiple social media platforms, URL generation, HTTP requests and basic result interpretation | ✅ Completed |
+| `v0.3` | Improved result presentation using Rich and HTTP status code color classification | 🚧 Current |
 | `v1.0` | Stable release | 🔲 Planned |
 
 The project uses Git for version control, allowing previous development stages to be tracked through commits and version tags.
@@ -316,11 +339,10 @@ The source code remains in the main project structure while Git preserves the hi
 
 Future versions may introduce:
 
-- Improved result presentation.
-- Rich-based terminal output.
 - Improved HTTP error handling.
 - Additional social media platforms.
 - More detailed HTTP response analysis.
+- Improved username detection techniques.
 - Structured result handling.
 - Additional OSINT capabilities.
 - Further automation.
