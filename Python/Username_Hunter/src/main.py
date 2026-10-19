@@ -1,10 +1,10 @@
 from username_hunter import UsernameHunter
 import argparse
-import requests
 
-parser = argparse.ArgumentParser(description=" This tool allows you to check if a username is used in a Social Media")
+
+parser = argparse.ArgumentParser(description=" OSINT tool for checking username presence across social media platforms")
 parser.add_argument("-u","--username",type=str,required=True,help="Introduce a username to search" )
-parser.add_argument("-s","--social",type=str,required=False,nargs="+",help="Introduce the social media which you want to seach. You can introduce more than one")
+parser.add_argument("-s","--social",type=str,required=False,nargs="+",help="Social media platforms to search. Multiple platforms can be specified")
 
 args = parser.parse_args()
 

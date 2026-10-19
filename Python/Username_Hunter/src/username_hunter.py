@@ -15,17 +15,17 @@ class UsernameHunter:
         self.social_media = social_media 
         self.platforms = {
             "github":{
-                "url":"https://www.github.com/{username}",
+                "url":"https://github.com/{username}",
                 "method":"Get",
                 "expected_Status":200
             },
             "linkedin":{
-                "url":"https://www.linkdin.com/in/{username}",
+                "url":"https://www.linkedin.com/in/{username}",
                 "method":"GET",
                 "expected_status":200
             },
             "instagram":{
-                "url":"https://www.instagram.com/user/{username}",
+                "url":"https://www.instagram.com/{username}",
                 "method":"GET",
                 "expected_status":200
             },
@@ -58,17 +58,12 @@ class UsernameHunter:
                 "url":"https://www.onlyfans.com/{username}",
                 "method":"GET",
                 "expected_status":200
-            },
+            }
             
-            "discord":{
-                "url":"https://www.discord.com/users/{username}",
-                "method":"GET",
-                "expected_status":200
+            
             }
             
            
-        }
-    
     def build_url(self):
         
         """ Build a URL for a selected social media. """
@@ -102,12 +97,24 @@ class UsernameHunter:
         
         for social,url in urls: 
             
-            response = requests.get(url)
+            try:
+                
             
-            results[social] = {
+                response = requests.get(url,timeout=10)
+            
+                results[social] = {
                 "url":url,
                 "status_code": response.status_code
-            }
+                }
+            
+            except requests.RequestException as e:
+                
+                results[social]={
+                    "url":url,
+                    "error":str(e)
+                }
+                
+             
             
         return results
     
@@ -125,21 +132,36 @@ class UsernameHunter:
         
         for social,data in results.items():
             
-            if data["status_code"] == 200: 
+            if "error" in data:
                 
-                status = f"[green]{data["status_code"]}[/green]"
+                status = "[red]Error[/red]"
+                result = "[red]Request Error[/red]"
+                
+            elif data["status_code"] == 200: 
+                
+                status = f"[green]{data['status_code']}[/green]"
                 table.add_row(social,status,"[green]Found[/green]",data["url"])
                 
             elif data["status_code"] >= 300 and data["status_code"] < 400:
                 
-                status = f"[yellow]{data["status_code"]}[/yellow]"
-                table.add_row(social,status,"[yellow]Not Found[/yellow]",data["url"])
+                status = f"[yellow]{data['status_code']}[/yellow]"
+                table.add_row(social,status,"[yellow]Redirect[/yellow]",data["url"])
             
-            elif data["status_code"] >= 400:
+            elif data["status_code"] == 403:
                 
-                status = f"[red]{data["status_code"]}[/red]"
-                table.add_row(social,status,"[red]Not found[/red]",data["url"])
-        
+                status = f"[yellow]{data['status_code']}[/yellow]"
+                table.add_row(social,status,"[red]Access Restricted[/red]",data["url"])
+            
+            elif data["status_code"]==404:
+                
+                status = f"[red]{data['status_code']}[/red]"
+                table.add_row(social,status,"[red]Not found[/red]",data["url"]) 
+            
+            else:
+                
+                status = f"[yellow]{data['status_code']}[/yellow]"
+                table.add_row(social,status,"[yellow]Unknown[/yellow]",data["url"])
+                       
         console.print(table)
         
           
