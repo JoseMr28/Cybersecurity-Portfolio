@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Mon Aug 24 14:45:47 2026 as: /usr/lib/nmap/nmap -v -Pn -n -&#45;reason -oX Archetype_SMB_Shares_Enumeration -p 445 -script=smb-enum-shares 10.129.168.47 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -v -Pn -n -&#45;reason -oX Archetype_SMB_Shares_Enumeration -p 445 -script=smb-enum-shares 10.129.168.47" start="1787597147" startstr="Mon Aug 24 14:45:47 2026" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1787597147"/>
+<taskend task="NSE" time="1787597147"/>
+<taskbegin task="SYN Stealth Scan" time="1787597147"/>
+<taskend task="SYN Stealth Scan" time="1787597147" extrainfo="1 total ports"/>
+<taskbegin task="NSE" time="1787597147"/>
+<taskend task="NSE" time="1787597177"/>
+<host starttime="1787597147" endtime="1787597177"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.168.47" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<hostscript><script id="smb-enum-shares" output="&#xa;  account_used: guest&#xa;  \\10.129.168.47\ADMIN$: &#xa;    Type: STYPE_DISKTREE_HIDDEN&#xa;    Comment: Remote Admin&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;&#xa;  \\10.129.168.47\C$: &#xa;    Type: STYPE_DISKTREE_HIDDEN&#xa;    Comment: Default share&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;&#xa;  \\10.129.168.47\IPC$: &#xa;    Type: STYPE_IPC_HIDDEN&#xa;    Comment: Remote IPC&#xa;    Anonymous access: READ/WRITE&#xa;    Current user access: READ/WRITE&#xa;  \\10.129.168.47\backups: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: &#xa;    Anonymous access: READ&#xa;    Current user access: READ"><elem key="account_used">guest</elem>
+<table key="\\10.129.168.47\ADMIN$">
+<elem key="Type">STYPE_DISKTREE_HIDDEN</elem>
+<elem key="Comment">Remote Admin</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+<table key="\\10.129.168.47\C$">
+<elem key="Type">STYPE_DISKTREE_HIDDEN</elem>
+<elem key="Comment">Default share</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+<table key="\\10.129.168.47\IPC$">
+<elem key="Type">STYPE_IPC_HIDDEN</elem>
+<elem key="Comment">Remote IPC</elem>
+<elem key="Anonymous access">READ/WRITE</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+<table key="\\10.129.168.47\backups">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment"></elem>
+<elem key="Anonymous access">READ</elem>
+<elem key="Current user access">READ</elem>
+</table>
+</script></hostscript><times srtt="38339" rttvar="38339" to="191695"/>
+</host>
+<taskbegin task="NSE" time="1787597177"/>
+<taskend task="NSE" time="1787597177"/>
+<runstats><finished time="1787597177" timestr="Mon Aug 24 14:46:17 2026" summary="Nmap done at Mon Aug 24 14:46:17 2026; 1 IP address (1 host up) scanned in 30.51 seconds" elapsed="30.51" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

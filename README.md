@@ -7,7 +7,7 @@
 
 Welcome to my Cybersecurity Portfolio.
 
-This repository showcases my practical penetration testing engagements performed in authorized laboratory environments. Each assessment follows a structured penetration testing methodology and includes professional documentation consisting of an Executive Report, a Technical Report, and supporting artifacts.
+This repository showcases my practical penetration testing assessments performed in authorized laboratory environments. Each assessment follows a structured penetration testing methodology and includes professional documentation consisting of an Executive Report, a Technical Report, and supporting artifacts.
 
 ---
 
@@ -28,8 +28,9 @@ I continuously improve my technical skills through hands-on laboratories, indepe
 - Linux Privilege Escalation
 - Windows Enumeration
 - Active Directory Fundamentals
+- Microsoft SQL Server Enumeration
 - Python for Cybersecurity
-- Technical & Executive Reporting
+- Technical and Executive Reporting
 
 ---
 
@@ -56,14 +57,12 @@ Each assessment follows a structured methodology:
 
 # Portfolio
 
-
 | Machine | Platform | Category | Difficulty | Status | Executive Report | Technical Report |
 |----------|----------|----------|------------|:------:|:----------------:|:----------------:|
-| DC-1 | VulnHub | Linux | Beginner | ✅ Completed | [📄 PDF](./VulnHub/DC-1/reports/DC-1_Executive_Report.pdf) | [📄 PDF](./VulnHub/DC-1/reports/DC-1_Technical_Report.pdf) |
-| Vaccine | Hack The Box | Web | Easy | ✅ Completed | [📄 PDF](./HackTheBox/Vaccine/reports/Vaccine_Executive_Report.pdf) | [📄 PDF](./HackTheBox/Vaccine/reports/Vaccine_Technical_Report.pdf) |
-| Oopsie | Hack The Box | Web | Easy | ✅ Completed | [📄 PDF](./HackTheBox/Oopsie/reports/Oopsie_Executive_Report.pdf) | [📄 PDF](./HackTheBox/Oopsie/reports/Oopsie_Technical_Report.pdf) |
-
-> Report links will be enabled once each assessment is uploaded to the repository.
+| DC-1 | VulnHub | Linux | Beginner | ✅ Completed | [📄 PDF](./VulnHub/DC-1/reports/DC1_Executive_Report.pdf) | [📄 PDF](./VulnHub/DC-1/reports/DC1_Technical_Report.pdf) |
+| Vaccine | Hack The Box | Web / Linux | Easy | ✅ Completed | [📄 PDF](./HackTheBox/Vaccine/reports/Vaccine_Executive_Report.pdf) | [📄 PDF](./HackTheBox/Vaccine/reports/Vaccine_Technical_Report.pdf) |
+| Oopsie | Hack The Box | Web / Linux | Easy | ✅ Completed | [📄 PDF](./HackTheBox/Oopsie/reports/Oopsie_Executive_Report.pdf) | [📄 PDF](./HackTheBox/Oopsie/reports/Oopsie_Technical_Report.pdf) |
+| Archetype | Hack The Box | SMB / MSSQL / Windows | Easy | ✅ Completed | [📄 PDF](./HackTheBox/Archetype/reports/Archetype_Executive_Report.pdf) | [📄 PDF](./HackTheBox/Archetype/reports/Archetype_Technical_Report.pdf) |
 
 ---
 
@@ -74,35 +73,37 @@ Cybersecurity-Portfolio/
 │
 ├── VulnHub/
 │   ├── README.md
-│   │
 │   └── DC-1/
 │       ├── README.md
-│       ├── Executive_Report.pdf
-│       ├── Technical_Report.pdf
+│       ├── reports/
+│       │   ├── DC1_Executive_Report.pdf
+│       │   └── DC1_Technical_Report.pdf
 │       └── supporting-artifacts/
-│           ├── README.md
-│           ├── nmap.xml
-│           ├── nikto.txt
-│           ├── gobuster.txt
-│           ├── screenshots/
-│           └── ...
 │
 ├── HackTheBox/
 │   ├── README.md
 │   │
-│   └── Vaccine/
+│   ├── Vaccine/
+│   │   ├── README.md
+│   │   └── reports/
+│   │       ├── Vaccine_Executive_Report.pdf
+│   │       └── Vaccine_Technical_Report.pdf
+│   │
+│   ├── Oopsie/
+│   │   ├── README.md
+│   │   ├── reports/
+│   │   │   ├── Oopsie_Executive_Report.pdf
+│   │   │   └── Oopsie_Technical_Report.pdf
+│   │   └── artifacts/
+│   │
+│   └── Archetype/
 │       ├── README.md
-│       ├── Executive_Report.pdf
-│       ├── Technical_Report.pdf
-│       └── supporting-artifacts/
-│           ├── README.md
-│           ├── nmap.xml
-│           ├── gobuster.txt
-│           ├── sqlmap.log
-│           ├── burp_request.txt
-│           ├── nikto.txt
-│           ├── screenshots/
-│           └── ...
+│       ├── reports/
+│       │   ├── Archetype_Executive_Report.pdf
+│       │   └── Archetype_Technical_Report.pdf
+│       └── artifacts/
+│
+├── Python/
 │
 └── LICENSE
 ```
