@@ -27,7 +27,9 @@ I continuously improve my technical skills through hands-on laboratories, indepe
 - SQL Injection
 - Linux Privilege Escalation
 - Windows Enumeration
-- Active Directory Fundamentals
+- Active Directory Enumeration
+- Active Directory Privilege Escalation
+- SMB, LDAP and Kerberos Enumeration
 - Microsoft SQL Server Enumeration
 - Python for Cybersecurity
 - Technical and Executive Reporting
@@ -63,6 +65,7 @@ Each assessment follows a structured methodology:
 | Vaccine | Hack The Box | Web / Linux | Easy | ✅ Completed | [📄 PDF](./HackTheBox/Vaccine/reports/Vaccine_Executive_Report.pdf) | [📄 PDF](./HackTheBox/Vaccine/reports/Vaccine_Technical_Report.pdf) |
 | Oopsie | Hack The Box | Web / Linux | Easy | ✅ Completed | [📄 PDF](./HackTheBox/Oopsie/reports/Oopsie_Executive_Report.pdf) | [📄 PDF](./HackTheBox/Oopsie/reports/Oopsie_Technical_Report.pdf) |
 | Archetype | Hack The Box | SMB / MSSQL / Windows | Easy | ✅ Completed | [📄 PDF](./HackTheBox/Archetype/reports/Archetype_Executive_Report.pdf) | [📄 PDF](./HackTheBox/Archetype/reports/Archetype_Technical_Report.pdf) |
+| Support | Hack The Box | Active Directory / Windows | Easy | ✅ Completed | [📄 PDF](./HackTheBox/Support/reports/Support_Executive_Report.pdf) | [📄 PDF](./HackTheBox/Support/reports/Support_Technical_Report.pdf) |
 
 ---
 
@@ -96,12 +99,23 @@ Cybersecurity-Portfolio/
 │   │   │   └── Oopsie_Technical_Report.pdf
 │   │   └── artifacts/
 │   │
-│   └── Archetype/
+│   ├── Archetype/
+│   │   ├── README.md
+│   │   ├── reports/
+│   │   │   ├── Archetype_Executive_Report.pdf
+│   │   │   └── Archetype_Technical_Report.pdf
+│   │   └── artifacts/
+│   │
+│   └── Support/
 │       ├── README.md
 │       ├── reports/
-│       │   ├── Archetype_Executive_Report.pdf
-│       │   └── Archetype_Technical_Report.pdf
+│       │   ├── Support_Executive_Report.pdf
+│       │   └── Support_Technical_Report.pdf
 │       └── artifacts/
+│           ├── scans/
+│           ├── enumeration/
+│           ├── exploits/
+│           └── evidence/
 │
 ├── Python/
 │

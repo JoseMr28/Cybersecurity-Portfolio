@@ -1,0 +1,12 @@
+Server:		10.129.230.181
+Address:	10.129.230.181#53
+
+support.htb
+	origin = dc.support.htb
+	mail addr = hostmaster.support.htb
+	serial = 114
+	refresh = 900
+	retry = 600
+	expire = 86400
+	minimum = 3600
+

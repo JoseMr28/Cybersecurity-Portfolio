@@ -1,0 +1,44 @@
+Method Table (1..32)
+########## UserInfo.Program
+1: default class [mscorlib]System.Threading.Tasks.Task Main (string[] args)  (param: 1 impl_flags: cil managed )
+2: instance default void '.ctor' ()  (param: 2 impl_flags: cil managed )
+3: default void '<Main>' (string[] args)  (param: 2 impl_flags: cil managed )
+########## UserInfo.GetUserOptions
+4: instance default string get_UserName ()  (param: 3 impl_flags: cil managed )
+5: instance default void set_UserName (string 'value')  (param: 3 impl_flags: cil managed )
+6: instance default void '.ctor' ()  (param: 4 impl_flags: cil managed )
+########## UserInfo.FindUserOptions
+7: instance default string get_FirstName ()  (param: 4 impl_flags: cil managed )
+8: instance default void set_FirstName (string 'value')  (param: 4 impl_flags: cil managed )
+9: instance default string get_LastName ()  (param: 5 impl_flags: cil managed )
+10: instance default void set_LastName (string 'value')  (param: 5 impl_flags: cil managed )
+11: instance default void '.ctor' ()  (param: 6 impl_flags: cil managed )
+########## UserInfo.GlobalOptions
+12: instance default bool get_Verbose ()  (param: 6 impl_flags: cil managed )
+13: instance default void set_Verbose (bool 'value')  (param: 6 impl_flags: cil managed )
+14: instance default void '.ctor' ()  (param: 7 impl_flags: cil managed )
+########## UserInfo.Services.Protected
+15: default string getPassword ()  (param: 7 impl_flags: cil managed )
+16: instance default void '.ctor' ()  (param: 7 impl_flags: cil managed )
+17: default void '.cctor' ()  (param: 7 impl_flags: cil managed )
+########## UserInfo.Services.LdapQuery
+18: instance default void '.ctor' ()  (param: 7 impl_flags: cil managed )
+19: instance default void query (string first, string last, [opt] bool verbose)  (param: 7 impl_flags: cil managed )
+20: instance default void printUser (string username, [opt] bool verbose)  (param: 10 impl_flags: cil managed )
+########## UserInfo.Commands.FindUser
+21: instance default void '.ctor' ()  (param: 12 impl_flags: cil managed )
+22: instance default void OnConfigure (class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.ICommandConfigurationBuilder builder)  (param: 12 impl_flags: cil managed )
+23: instance default class [mscorlib]System.Threading.Tasks.Task OnExecuteAsync (class UserInfo.GlobalOptions options, class UserInfo.FindUserOptions commandOptions, valuetype [mscorlib]System.Threading.CancellationToken cancellationToken)  (param: 13 impl_flags: cil managed )
+########## UserInfo.Commands.GetUser
+24: instance default void '.ctor' ()  (param: 16 impl_flags: cil managed )
+25: instance default void OnConfigure (class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.ICommandConfigurationBuilder builder)  (param: 16 impl_flags: cil managed )
+26: instance default class [mscorlib]System.Threading.Tasks.Task OnExecuteAsync (class UserInfo.GlobalOptions options, class UserInfo.GetUserOptions commandOptions, valuetype [mscorlib]System.Threading.CancellationToken cancellationToken)  (param: 17 impl_flags: cil managed )
+########## .<Main>d__0
+27: instance default void MoveNext ()  (param: 20 impl_flags: cil managed )
+28: instance default void SetStateMachine (class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine stateMachine)  (param: 20 impl_flags: cil managed )
+########## .<OnExecuteAsync>d__2
+29: instance default void MoveNext ()  (param: 21 impl_flags: cil managed )
+30: instance default void SetStateMachine (class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine stateMachine)  (param: 21 impl_flags: cil managed )
+########## .<OnExecuteAsync>d__2
+31: instance default void MoveNext ()  (param: 22 impl_flags: cil managed )
+32: instance default void SetStateMachine (class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine stateMachine)  (param: 22 impl_flags: cil managed )

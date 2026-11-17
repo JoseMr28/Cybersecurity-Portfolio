@@ -1,0 +1,18 @@
+# extended LDIF
+#
+# LDAPv3
+# base <DC=support,DC=htb> with scope baseObject
+# filter: (objectclass=*)
+# requesting: ms-DS-MachineAccountQuota 
+#
+
+# support.htb
+dn: DC=support,DC=htb
+ms-DS-MachineAccountQuota: 10
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 2
+# numEntries: 1

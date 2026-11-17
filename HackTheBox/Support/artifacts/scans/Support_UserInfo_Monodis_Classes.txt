@@ -1,0 +1,14 @@
+Typedef Table
+1: (null) (flist=1, mlist=1, flags=0x0, extends=0x0)
+2: UserInfo.Program (flist=1, mlist=1, flags=0x100000, extends=0x41)
+3: UserInfo.GetUserOptions (flist=1, mlist=4, flags=0x100001, extends=0x41)
+4: UserInfo.FindUserOptions (flist=2, mlist=7, flags=0x100001, extends=0x41)
+5: UserInfo.GlobalOptions (flist=4, mlist=12, flags=0x100001, extends=0x41)
+6: UserInfo.Services.Protected (flist=5, mlist=15, flags=0x100000, extends=0x41)
+7: UserInfo.Services.LdapQuery (flist=7, mlist=18, flags=0x100000, extends=0x41)
+8: UserInfo.Commands.FindUser (flist=9, mlist=21, flags=0x100001, extends=0x6)
+9: UserInfo.Commands.GetUser (flist=9, mlist=24, flags=0x100001, extends=0xa)
+10: UserInfo.Program/<Main>d__0 (flist=9, mlist=27, flags=0x100103, extends=0x59)
+11: UserInfo.Commands.FindUser/<OnExecuteAsync>d__2 (flist=13, mlist=29, flags=0x100103, extends=0x59)
+12: UserInfo.Commands.GetUser/<OnExecuteAsync>d__2 (flist=17, mlist=31, flags=0x100103, extends=0x59)
+

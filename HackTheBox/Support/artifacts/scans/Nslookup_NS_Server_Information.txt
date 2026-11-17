@@ -1,0 +1,5 @@
+Server:		10.129.131.177
+Address:	10.129.131.177#53
+
+support.htb	nameserver = dc.support.htb.
+

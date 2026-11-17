@@ -1,0 +1,5 @@
+Server:		10.129.230.181
+Address:	10.129.230.181#53
+
+_kerberos._tcp.support.htb	service = 0 100 88 dc.support.htb.
+

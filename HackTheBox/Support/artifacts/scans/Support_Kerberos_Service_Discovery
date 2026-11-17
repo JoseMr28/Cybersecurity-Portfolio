@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Mon Sep 28 14:20:03 2026 as: /usr/lib/nmap/nmap -v -Pn -n -&#45;reason -oX Support_Kerberos_Service_Discovery -sV -sC -p 88 10.129.147.180 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -v -Pn -n -&#45;reason -oX Support_Kerberos_Service_Discovery -sV -sC -p 88 10.129.147.180" start="1790619603" startstr="Mon Sep 28 14:20:03 2026" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="88"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1790619603"/>
+<taskend task="NSE" time="1790619603"/>
+<taskbegin task="NSE" time="1790619603"/>
+<taskend task="NSE" time="1790619603"/>
+<taskbegin task="NSE" time="1790619603"/>
+<taskend task="NSE" time="1790619603"/>
+<taskbegin task="SYN Stealth Scan" time="1790619603"/>
+<taskend task="SYN Stealth Scan" time="1790619603" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1790619603"/>
+<taskend task="Service scan" time="1790619609" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1790619609"/>
+<taskend task="NSE" time="1790619614"/>
+<taskbegin task="NSE" time="1790619614"/>
+<taskend task="NSE" time="1790619614"/>
+<taskbegin task="NSE" time="1790619614"/>
+<taskend task="NSE" time="1790619614"/>
+<host starttime="1790619603" endtime="1790619614"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.147.180" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2026-09-28 18:20:10Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<times srtt="35511" rttvar="35511" to="177555"/>
+</host>
+<taskbegin task="NSE" time="1790619614"/>
+<taskend task="NSE" time="1790619614"/>
+<taskbegin task="NSE" time="1790619614"/>
+<taskend task="NSE" time="1790619614"/>
+<taskbegin task="NSE" time="1790619614"/>
+<taskend task="NSE" time="1790619614"/>
+<runstats><finished time="1790619614" timestr="Mon Sep 28 14:20:14 2026" summary="Nmap done at Mon Sep 28 14:20:14 2026; 1 IP address (1 host up) scanned in 11.42 seconds" elapsed="11.42" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,1282 @@
+.assembly extern mscorlib
+{
+  .ver 4:0:0:0
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 ) // .z\V.4..
+}
+.assembly extern CommandLineParser
+{
+  .ver 0:7:0:0
+}
+.assembly extern System.DirectoryServices
+{
+  .ver 4:0:0:0
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A ) // .?_....:
+}
+.assembly extern System
+{
+  .ver 4:0:0:0
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 ) // .z\V.4..
+}
+.assembly 'UserInfo'
+{
+  .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilationRelaxationsAttribute::'.ctor'(int32) =  (01 00 08 00 00 00 00 00 ) // ........
+
+  .custom instance void class [mscorlib]System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::'.ctor'() =  (
+		01 00 01 00 54 02 16 57 72 61 70 4E 6F 6E 45 78   // ....T..WrapNonEx
+		63 65 70 74 69 6F 6E 54 68 72 6F 77 73 01       ) // ceptionThrows.
+
+  .custom instance void class [mscorlib]System.Diagnostics.DebuggableAttribute::'.ctor'(valuetype [mscorlib]System.Diagnostics.DebuggableAttribute/DebuggingModes) =  (01 00 02 00 00 00 00 00 ) // ........
+
+  .custom instance void class [mscorlib]System.Reflection.AssemblyTitleAttribute::'.ctor'(string) =  (01 00 08 55 73 65 72 49 6E 66 6F 00 00 ) // ...UserInfo..
+
+  .custom instance void class [mscorlib]System.Reflection.AssemblyDescriptionAttribute::'.ctor'(string) =  (01 00 00 00 00 ) // .....
+
+  .custom instance void class [mscorlib]System.Reflection.AssemblyConfigurationAttribute::'.ctor'(string) =  (01 00 00 00 00 ) // .....
+
+  .custom instance void class [mscorlib]System.Reflection.AssemblyCompanyAttribute::'.ctor'(string) =  (01 00 00 00 00 ) // .....
+
+  .custom instance void class [mscorlib]System.Reflection.AssemblyProductAttribute::'.ctor'(string) =  (01 00 08 55 73 65 72 49 6E 66 6F 00 00 ) // ...UserInfo..
+
+  .custom instance void class [mscorlib]System.Reflection.AssemblyCopyrightAttribute::'.ctor'(string) =  (
+		01 00 12 43 6F 70 79 72 69 67 68 74 20 C2 A9 20   // ...Copyright .. 
+		20 32 30 32 32 00 00                            ) //  2022..
+
+  .custom instance void class [mscorlib]System.Reflection.AssemblyTrademarkAttribute::'.ctor'(string) =  (01 00 00 00 00 ) // .....
+
+  .custom instance void class [mscorlib]System.Runtime.InteropServices.ComVisibleAttribute::'.ctor'(bool) =  (01 00 00 00 00 ) // .....
+
+  .custom instance void class [mscorlib]System.Runtime.InteropServices.GuidAttribute::'.ctor'(string) =  (
+		01 00 24 35 61 32 38 30 64 30 62 2D 39 66 64 30   // ..$5a280d0b-9fd0
+		2D 34 37 30 31 2D 38 66 39 36 2D 38 32 65 32 66   // -4701-8f96-82e2f
+		31 65 61 39 64 66 62 00 00                      ) // 1ea9dfb..
+
+  .custom instance void class [mscorlib]System.Reflection.AssemblyFileVersionAttribute::'.ctor'(string) =  (01 00 07 31 2E 30 2E 30 2E 30 00 00 ) // ...1.0.0.0..
+
+  .custom instance void class [mscorlib]System.Runtime.Versioning.TargetFrameworkAttribute::'.ctor'(string) =  (
+		01 00 1A 2E 4E 45 54 46 72 61 6D 65 77 6F 72 6B   // ....NETFramework
+		2C 56 65 72 73 69 6F 6E 3D 76 34 2E 38 01 00 54   // ,Version=v4.8..T
+		0E 14 46 72 61 6D 65 77 6F 72 6B 44 69 73 70 6C   // ..FrameworkDispl
+		61 79 4E 61 6D 65 12 2E 4E 45 54 20 46 72 61 6D   // ayName..NET Fram
+		65 77 6F 72 6B 20 34 2E 38                      ) // ework 4.8
+
+  .hash algorithm 0x00008004
+  .ver  1:0:0:0
+}
+.module UserInfo.exe // GUID = {BCB9A7C1-A11B-4288-B919-CBDD9ABA8CA4}
+
+
+.namespace UserInfo
+{
+  .class private auto ansi beforefieldinit Program
+  	extends [mscorlib]System.Object
+  {
+
+    // method line 1
+    .method private static hidebysig 
+           default class [mscorlib]System.Threading.Tasks.Task Main (string[] args)  cil managed 
+    {
+        .custom instance void class [mscorlib]System.Runtime.CompilerServices.AsyncStateMachineAttribute::'.ctor'(class [mscorlib]System.Type) =  (
+		01 00 1B 55 73 65 72 49 6E 66 6F 2E 50 72 6F 67   // ...UserInfo.Prog
+		72 61 6D 2B 3C 4D 61 69 6E 3E 64 5F 5F 30 00 00 ) // ram+<Main>d__0..
+
+        // Method begins at RVA 0x2050
+	// Code size 55 (0x37)
+	.maxstack 2
+	.locals init (
+		valuetype UserInfo.Program/'<Main>d__0'	V_0)
+	IL_0000:  ldloca.s 0
+	IL_0002:  call valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create()
+	IL_0007:  stfld valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Program/'<Main>d__0'::'<>t__builder'
+	IL_000c:  ldloca.s 0
+	IL_000e:  ldarg.0 
+	IL_000f:  stfld string[] UserInfo.Program/'<Main>d__0'::args
+	IL_0014:  ldloca.s 0
+	IL_0016:  ldc.i4.m1 
+	IL_0017:  stfld int32 UserInfo.Program/'<Main>d__0'::'<>1__state'
+	IL_001c:  ldloca.s 0
+	IL_001e:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Program/'<Main>d__0'::'<>t__builder'
+	IL_0023:  ldloca.s 0
+	IL_0025:  call instance void valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<valuetype UserInfo.Program/'<Main>d__0'> ([out] !!0&)
+	IL_002a:  ldloca.s 0
+	IL_002c:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Program/'<Main>d__0'::'<>t__builder'
+	IL_0031:  call instance class [mscorlib]System.Threading.Tasks.Task valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task()
+	IL_0036:  ret 
+    } // end of method Program::Main
+
+    // method line 2
+    .method public hidebysig specialname rtspecialname 
+           instance default void '.ctor' ()  cil managed 
+    {
+        // Method begins at RVA 0x2093
+	// Code size 7 (0x7)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  call instance void object::'.ctor'()
+	IL_0006:  ret 
+    } // end of method Program::.ctor
+
+    // method line 3
+    .method private static hidebysig specialname 
+           default void '<Main>' (string[] args)  cil managed 
+    {
+        // Method begins at RVA 0x209c
+	.entrypoint
+	// Code size 20 (0x14)
+	.maxstack 1
+	.locals init (
+		valuetype [mscorlib]System.Runtime.CompilerServices.TaskAwaiter	V_0)
+	IL_0000:  ldarg.0 
+	IL_0001:  call class [mscorlib]System.Threading.Tasks.Task class UserInfo.Program::Main(string[])
+	IL_0006:  callvirt instance valuetype [mscorlib]System.Runtime.CompilerServices.TaskAwaiter class [mscorlib]System.Threading.Tasks.Task::GetAwaiter()
+	IL_000b:  stloc.0 
+	IL_000c:  ldloca.s 0
+	IL_000e:  call instance void valuetype [mscorlib]System.Runtime.CompilerServices.TaskAwaiter::GetResult()
+	IL_0013:  ret 
+    } // end of method Program::<Main>
+
+  .class nested private auto ansi sealed beforefieldinit '<Main>d__0'
+  	extends [mscorlib]System.ValueType
+  	implements [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine  {
+    .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+    .field  public  int32 '<>1__state'
+    .field  public  valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder '<>t__builder'
+    .field  public  string[] args
+    .field  private  valuetype [mscorlib]System.Runtime.CompilerServices.TaskAwaiter`1<class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Parsing.IParserResult`1<class UserInfo.GlobalOptions>> '<>u__1'
+
+    // method line 27
+    .method private final virtual hidebysig newslot 
+           instance default void MoveNext ()  cil managed 
+    {
+        // Method begins at RVA 0x26a4
+	.override class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine::MoveNext
+	// Code size 186 (0xba)
+	.maxstack 3
+	.locals init (
+		int32	V_0,
+		valuetype [mscorlib]System.Runtime.CompilerServices.TaskAwaiter`1<class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Parsing.IParserResult`1<class UserInfo.GlobalOptions>>	V_1,
+		class [mscorlib]System.Exception	V_2)
+	IL_0000:  ldarg.0 
+	IL_0001:  ldfld int32 UserInfo.Program/'<Main>d__0'::'<>1__state'
+	IL_0006:  stloc.0 
+	.try { // 0
+	  IL_0007:  ldloc.0 
+	  IL_0008:  brfalse.s IL_0064
+
+	  IL_000a:  newobj instance void class [CommandLineParser]MatthiWare.CommandLine.CommandLineParserOptions::'.ctor'()
+	  IL_000f:  dup 
+	  IL_0010:  ldstr "UserInfo.exe"
+	  IL_0015:  callvirt instance void class [CommandLineParser]MatthiWare.CommandLine.CommandLineParserOptions::set_AppName(string)
+	  IL_001a:  newobj instance void class [CommandLineParser]MatthiWare.CommandLine.CommandLineParser`1<class UserInfo.GlobalOptions>::'.ctor'(class [CommandLineParser]MatthiWare.CommandLine.CommandLineParserOptions)
+	  IL_001f:  dup 
+	  IL_0020:  call class [mscorlib]System.Reflection.Assembly class [mscorlib]System.Reflection.Assembly::GetExecutingAssembly()
+	  IL_0025:  callvirt instance void class [CommandLineParser]MatthiWare.CommandLine.CommandLineParser`1<class UserInfo.GlobalOptions>::DiscoverCommands(class [mscorlib]System.Reflection.Assembly)
+	  IL_002a:  ldarg.0 
+	  IL_002b:  ldfld string[] UserInfo.Program/'<Main>d__0'::args
+	  IL_0030:  callvirt instance class [mscorlib]System.Threading.Tasks.Task`1<class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Parsing.IParserResult`1<!0>> class [CommandLineParser]MatthiWare.CommandLine.CommandLineParser`1<class UserInfo.GlobalOptions>::ParseAsync(string[])
+	  IL_0035:  callvirt instance valuetype [mscorlib]System.Runtime.CompilerServices.TaskAwaiter`1<!0> class [mscorlib]System.Threading.Tasks.Task`1<class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Parsing.IParserResult`1<class UserInfo.GlobalOptions>>::GetAwaiter()
+	  IL_003a:  stloc.1 
+	  IL_003b:  ldloca.s 1
+	  IL_003d:  call instance bool valuetype [mscorlib]System.Runtime.CompilerServices.TaskAwaiter`1<class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Parsing.IParserResult`1<class UserInfo.GlobalOptions>>::get_IsCompleted()
+	  IL_0042:  brtrue.s IL_0080
+
+	  IL_0044:  ldarg.0 
+	  IL_0045:  ldc.i4.0 
+	  IL_0046:  dup 
+	  IL_0047:  stloc.0 
+	  IL_0048:  stfld int32 UserInfo.Program/'<Main>d__0'::'<>1__state'
+	  IL_004d:  ldarg.0 
+	  IL_004e:  ldloc.1 
+	  IL_004f:  stfld valuetype [mscorlib]System.Runtime.CompilerServices.TaskAwaiter`1<class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Parsing.IParserResult`1<class UserInfo.GlobalOptions>> UserInfo.Program/'<Main>d__0'::'<>u__1'
+	  IL_0054:  ldarg.0 
+	  IL_0055:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Program/'<Main>d__0'::'<>t__builder'
+	  IL_005a:  ldloca.s 1
+	  IL_005c:  ldarg.0 
+	  IL_005d:  call instance void valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted<valuetype [mscorlib]System.Runtime.CompilerServices.TaskAwaiter`1<class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Parsing.IParserResult`1<class UserInfo.GlobalOptions>>, valuetype UserInfo.Program/'<Main>d__0'> ([out] !!0&, [out] !!1&)
+	  IL_0062:  leave.s IL_00b9
+
+	  IL_0064:  ldarg.0 
+	  IL_0065:  ldfld valuetype [mscorlib]System.Runtime.CompilerServices.TaskAwaiter`1<class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Parsing.IParserResult`1<class UserInfo.GlobalOptions>> UserInfo.Program/'<Main>d__0'::'<>u__1'
+	  IL_006a:  stloc.1 
+	  IL_006b:  ldarg.0 
+	  IL_006c:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.TaskAwaiter`1<class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Parsing.IParserResult`1<class UserInfo.GlobalOptions>> UserInfo.Program/'<Main>d__0'::'<>u__1'
+	  IL_0071:  initobj valuetype [mscorlib]System.Runtime.CompilerServices.TaskAwaiter`1<class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Parsing.IParserResult`1<class UserInfo.GlobalOptions>>
+	  IL_0077:  ldarg.0 
+	  IL_0078:  ldc.i4.m1 
+	  IL_0079:  dup 
+	  IL_007a:  stloc.0 
+	  IL_007b:  stfld int32 UserInfo.Program/'<Main>d__0'::'<>1__state'
+	  IL_0080:  ldloca.s 1
+	  IL_0082:  call instance !0 valuetype [mscorlib]System.Runtime.CompilerServices.TaskAwaiter`1<class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Parsing.IParserResult`1<class UserInfo.GlobalOptions>>::GetResult()
+	  IL_0087:  callvirt instance bool class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Parsing.IParserResult`1<class UserInfo.GlobalOptions>::get_HasErrors()
+	  IL_008c:  pop 
+	  IL_008d:  leave.s IL_00a6
+
+	} // end .try 0
+	catch class [mscorlib]System.Exception { // 0
+	  IL_008f:  stloc.2 
+	  IL_0090:  ldarg.0 
+	  IL_0091:  ldc.i4.s 0xfffffffe
+	  IL_0093:  stfld int32 UserInfo.Program/'<Main>d__0'::'<>1__state'
+	  IL_0098:  ldarg.0 
+	  IL_0099:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Program/'<Main>d__0'::'<>t__builder'
+	  IL_009e:  ldloc.2 
+	  IL_009f:  call instance void valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException(class [mscorlib]System.Exception)
+	  IL_00a4:  leave.s IL_00b9
+
+	} // end handler 0
+	IL_00a6:  ldarg.0 
+	IL_00a7:  ldc.i4.s 0xfffffffe
+	IL_00a9:  stfld int32 UserInfo.Program/'<Main>d__0'::'<>1__state'
+	IL_00ae:  ldarg.0 
+	IL_00af:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Program/'<Main>d__0'::'<>t__builder'
+	IL_00b4:  call instance void valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult()
+	IL_00b9:  ret 
+    } // end of method <Main>d__0::MoveNext
+
+    // method line 28
+    .method private final virtual hidebysig newslot 
+           instance default void SetStateMachine (class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine stateMachine)  cil managed 
+    {
+        .custom instance void class [mscorlib]System.Diagnostics.DebuggerHiddenAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+        // Method begins at RVA 0x277c
+	.override class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine::SetStateMachine
+	// Code size 13 (0xd)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Program/'<Main>d__0'::'<>t__builder'
+	IL_0006:  ldarg.1 
+	IL_0007:  call instance void valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetStateMachine(class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine)
+	IL_000c:  ret 
+    } // end of method <Main>d__0::SetStateMachine
+
+  } // end of class <Main>d__0
+
+  } // end of class UserInfo.Program
+}
+
+.namespace UserInfo
+{
+  .class public auto ansi beforefieldinit GetUserOptions
+  	extends [mscorlib]System.Object
+  {
+    .field  private  string '<UserName>k__BackingField'
+    .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+
+    // method line 4
+    .method public hidebysig specialname 
+           instance default string get_UserName ()  cil managed 
+    {
+        .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+        // Method begins at RVA 0x20bc
+	// Code size 7 (0x7)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  ldfld string UserInfo.GetUserOptions::'<UserName>k__BackingField'
+	IL_0006:  ret 
+    } // end of method GetUserOptions::get_UserName
+
+    // method line 5
+    .method public hidebysig specialname 
+           instance default void set_UserName (string 'value')  cil managed 
+    {
+        .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+        // Method begins at RVA 0x20c4
+	// Code size 8 (0x8)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  ldarg.1 
+	IL_0002:  stfld string UserInfo.GetUserOptions::'<UserName>k__BackingField'
+	IL_0007:  ret 
+    } // end of method GetUserOptions::set_UserName
+
+    // method line 6
+    .method public hidebysig specialname rtspecialname 
+           instance default void '.ctor' ()  cil managed 
+    {
+        // Method begins at RVA 0x20cd
+	// Code size 7 (0x7)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  call instance void object::'.ctor'()
+	IL_0006:  ret 
+    } // end of method GetUserOptions::.ctor
+
+	.property instance string UserName ()
+	{
+		.custom instance void class [CommandLineParser]MatthiWare.CommandLine.Core.Attributes.NameAttribute::'.ctor'(string) =  (01 00 08 75 73 65 72 6E 61 6D 65 00 00 ) // ...username..
+
+		.custom instance void class [CommandLineParser]MatthiWare.CommandLine.Core.Attributes.RequiredAttribute::'.ctor'(bool) =  (01 00 01 00 00 ) // .....
+
+		.custom instance void class [CommandLineParser]MatthiWare.CommandLine.Core.Attributes.DescriptionAttribute::'.ctor'(string) =  (01 00 08 55 73 65 72 6E 61 6D 65 00 00 ) // ...Username..
+
+		.get instance default string UserInfo.GetUserOptions::get_UserName () 
+		.set instance default void UserInfo.GetUserOptions::set_UserName (string 'value') 
+	}
+  } // end of class UserInfo.GetUserOptions
+}
+
+.namespace UserInfo
+{
+  .class public auto ansi beforefieldinit FindUserOptions
+  	extends [mscorlib]System.Object
+  {
+    .field  private  string '<FirstName>k__BackingField'
+    .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+    .field  private  string '<LastName>k__BackingField'
+    .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+
+    // method line 7
+    .method public hidebysig specialname 
+           instance default string get_FirstName ()  cil managed 
+    {
+        .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+        // Method begins at RVA 0x20d5
+	// Code size 7 (0x7)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  ldfld string UserInfo.FindUserOptions::'<FirstName>k__BackingField'
+	IL_0006:  ret 
+    } // end of method FindUserOptions::get_FirstName
+
+    // method line 8
+    .method public hidebysig specialname 
+           instance default void set_FirstName (string 'value')  cil managed 
+    {
+        .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+        // Method begins at RVA 0x20dd
+	// Code size 8 (0x8)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  ldarg.1 
+	IL_0002:  stfld string UserInfo.FindUserOptions::'<FirstName>k__BackingField'
+	IL_0007:  ret 
+    } // end of method FindUserOptions::set_FirstName
+
+    // method line 9
+    .method public hidebysig specialname 
+           instance default string get_LastName ()  cil managed 
+    {
+        .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+        // Method begins at RVA 0x20e6
+	// Code size 7 (0x7)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  ldfld string UserInfo.FindUserOptions::'<LastName>k__BackingField'
+	IL_0006:  ret 
+    } // end of method FindUserOptions::get_LastName
+
+    // method line 10
+    .method public hidebysig specialname 
+           instance default void set_LastName (string 'value')  cil managed 
+    {
+        .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+        // Method begins at RVA 0x20ee
+	// Code size 8 (0x8)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  ldarg.1 
+	IL_0002:  stfld string UserInfo.FindUserOptions::'<LastName>k__BackingField'
+	IL_0007:  ret 
+    } // end of method FindUserOptions::set_LastName
+
+    // method line 11
+    .method public hidebysig specialname rtspecialname 
+           instance default void '.ctor' ()  cil managed 
+    {
+        // Method begins at RVA 0x20f7
+	// Code size 7 (0x7)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  call instance void object::'.ctor'()
+	IL_0006:  ret 
+    } // end of method FindUserOptions::.ctor
+
+	.property instance string FirstName ()
+	{
+		.custom instance void class [CommandLineParser]MatthiWare.CommandLine.Core.Attributes.NameAttribute::'.ctor'(string) =  (01 00 05 66 69 72 73 74 00 00 ) // ...first..
+
+		.custom instance void class [CommandLineParser]MatthiWare.CommandLine.Core.Attributes.DescriptionAttribute::'.ctor'(string) =  (01 00 0A 46 69 72 73 74 20 6E 61 6D 65 00 00 ) // ...First name..
+
+		.get instance default string UserInfo.FindUserOptions::get_FirstName () 
+		.set instance default void UserInfo.FindUserOptions::set_FirstName (string 'value') 
+	}
+	.property instance string LastName ()
+	{
+		.custom instance void class [CommandLineParser]MatthiWare.CommandLine.Core.Attributes.NameAttribute::'.ctor'(string) =  (01 00 04 6C 61 73 74 00 00 ) // ...last..
+
+		.custom instance void class [CommandLineParser]MatthiWare.CommandLine.Core.Attributes.DescriptionAttribute::'.ctor'(string) =  (01 00 09 4C 61 73 74 20 6E 61 6D 65 00 00 ) // ...Last name..
+
+		.get instance default string UserInfo.FindUserOptions::get_LastName () 
+		.set instance default void UserInfo.FindUserOptions::set_LastName (string 'value') 
+	}
+  } // end of class UserInfo.FindUserOptions
+}
+
+.namespace UserInfo
+{
+  .class public auto ansi beforefieldinit GlobalOptions
+  	extends [mscorlib]System.Object
+  {
+    .field  private  bool '<Verbose>k__BackingField'
+    .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+
+    // method line 12
+    .method public hidebysig specialname 
+           instance default bool get_Verbose ()  cil managed 
+    {
+        .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+        // Method begins at RVA 0x20ff
+	// Code size 7 (0x7)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  ldfld bool UserInfo.GlobalOptions::'<Verbose>k__BackingField'
+	IL_0006:  ret 
+    } // end of method GlobalOptions::get_Verbose
+
+    // method line 13
+    .method public hidebysig specialname 
+           instance default void set_Verbose (bool 'value')  cil managed 
+    {
+        .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+        // Method begins at RVA 0x2107
+	// Code size 8 (0x8)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  ldarg.1 
+	IL_0002:  stfld bool UserInfo.GlobalOptions::'<Verbose>k__BackingField'
+	IL_0007:  ret 
+    } // end of method GlobalOptions::set_Verbose
+
+    // method line 14
+    .method public hidebysig specialname rtspecialname 
+           instance default void '.ctor' ()  cil managed 
+    {
+        // Method begins at RVA 0x2110
+	// Code size 7 (0x7)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  call instance void object::'.ctor'()
+	IL_0006:  ret 
+    } // end of method GlobalOptions::.ctor
+
+	.property instance bool Verbose ()
+	{
+		.custom instance void class [CommandLineParser]MatthiWare.CommandLine.Core.Attributes.NameAttribute::'.ctor'(string, string) =  (01 00 01 76 07 76 65 72 62 6F 73 65 00 00 ) // ...v.verbose..
+
+		.custom instance void class [CommandLineParser]MatthiWare.CommandLine.Core.Attributes.DefaultValueAttribute::'.ctor'(object) =  (01 00 02 00 00 00 ) // ......
+
+		.custom instance void class [CommandLineParser]MatthiWare.CommandLine.Core.Attributes.DescriptionAttribute::'.ctor'(string) =  (
+		01 00 0E 56 65 72 62 6F 73 65 20 6F 75 74 70 75   // ...Verbose outpu
+		74 00 00                                        ) // t..
+
+		.get instance default bool UserInfo.GlobalOptions::get_Verbose () 
+		.set instance default void UserInfo.GlobalOptions::set_Verbose (bool 'value') 
+	}
+  } // end of class UserInfo.GlobalOptions
+}
+
+.namespace UserInfo.Services
+{
+  .class private auto ansi beforefieldinit Protected
+  	extends [mscorlib]System.Object
+  {
+    .field  private static  string enc_password
+    .field  private static  unsigned int8[] key
+
+    // method line 15
+    .method public static hidebysig 
+           default string getPassword ()  cil managed 
+    {
+        // Method begins at RVA 0x2118
+	// Code size 68 (0x44)
+	.maxstack 6
+	.locals init (
+		unsigned int8[]	V_0,
+		unsigned int8[]	V_1,
+		int32	V_2)
+	IL_0000:  ldsfld string UserInfo.Services.Protected::enc_password
+	IL_0005:  call unsigned int8[] class [mscorlib]System.Convert::FromBase64String(string)
+	IL_000a:  stloc.0 
+	IL_000b:  ldloc.0 
+	IL_000c:  stloc.1 
+	IL_000d:  ldc.i4.0 
+	IL_000e:  stloc.2 
+	IL_000f:  br.s IL_0032
+
+	IL_0011:  ldloc.1 
+	IL_0012:  ldloc.2 
+	IL_0013:  ldloc.0 
+	IL_0014:  ldloc.2 
+	IL_0015:  ldelem.u1 
+	IL_0016:  ldsfld unsigned int8[] UserInfo.Services.Protected::key
+	IL_001b:  ldloc.2 
+	IL_001c:  ldsfld unsigned int8[] UserInfo.Services.Protected::key
+	IL_0021:  ldlen 
+	IL_0022:  conv.i4 
+	IL_0023:  rem 
+	IL_0024:  ldelem.u1 
+	IL_0025:  xor 
+	IL_0026:  ldc.i4 223
+	IL_002b:  xor 
+	IL_002c:  conv.u1 
+	IL_002d:  stelem.i1 
+	IL_002e:  ldloc.2 
+	IL_002f:  ldc.i4.1 
+	IL_0030:  add 
+	IL_0031:  stloc.2 
+	IL_0032:  ldloc.2 
+	IL_0033:  ldloc.0 
+	IL_0034:  ldlen 
+	IL_0035:  conv.i4 
+	IL_0036:  blt.s IL_0011
+
+	IL_0038:  call class [mscorlib]System.Text.Encoding class [mscorlib]System.Text.Encoding::get_Default()
+	IL_003d:  ldloc.1 
+	IL_003e:  callvirt instance string class [mscorlib]System.Text.Encoding::GetString(unsigned int8[])
+	IL_0043:  ret 
+    } // end of method Protected::getPassword
+
+    // method line 16
+    .method public hidebysig specialname rtspecialname 
+           instance default void '.ctor' ()  cil managed 
+    {
+        // Method begins at RVA 0x2168
+	// Code size 7 (0x7)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  call instance void object::'.ctor'()
+	IL_0006:  ret 
+    } // end of method Protected::.ctor
+
+    // method line 17
+    .method private static hidebysig specialname rtspecialname 
+           default void '.cctor' ()  cil managed 
+    {
+        // Method begins at RVA 0x2170
+	// Code size 31 (0x1f)
+	.maxstack 8
+	IL_0000:  ldstr "0Nv32PTwgYjzg9/8j5TbmvPd3e7WhtWWyuPsyO76/Y+U193E"
+	IL_0005:  stsfld string UserInfo.Services.Protected::enc_password
+	IL_000a:  call class [mscorlib]System.Text.Encoding class [mscorlib]System.Text.Encoding::get_ASCII()
+	IL_000f:  ldstr "armando"
+	IL_0014:  callvirt instance unsigned int8[] class [mscorlib]System.Text.Encoding::GetBytes(string)
+	IL_0019:  stsfld unsigned int8[] UserInfo.Services.Protected::key
+	IL_001e:  ret 
+    } // end of method Protected::.cctor
+
+  } // end of class UserInfo.Services.Protected
+}
+
+.namespace UserInfo.Services
+{
+  .class private auto ansi beforefieldinit LdapQuery
+  	extends [mscorlib]System.Object
+  {
+    .field  private  class [System.DirectoryServices]System.DirectoryServices.DirectoryEntry entry
+    .field  private  class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher ds
+
+    // method line 18
+    .method public hidebysig specialname rtspecialname 
+           instance default void '.ctor' ()  cil managed 
+    {
+        // Method begins at RVA 0x2190
+	// Code size 64 (0x40)
+	.maxstack 4
+	.locals init (
+		string	V_0)
+	IL_0000:  ldarg.0 
+	IL_0001:  call instance void object::'.ctor'()
+	IL_0006:  call string class UserInfo.Services.Protected::getPassword()
+	IL_000b:  stloc.0 
+	IL_000c:  ldarg.0 
+	IL_000d:  ldstr "LDAP://support.htb"
+	IL_0012:  ldstr "support\\ldap"
+	IL_0017:  ldloc.0 
+	IL_0018:  newobj instance void class [System.DirectoryServices]System.DirectoryServices.DirectoryEntry::'.ctor'(string, string, string)
+	IL_001d:  stfld class [System.DirectoryServices]System.DirectoryServices.DirectoryEntry UserInfo.Services.LdapQuery::entry
+	IL_0022:  ldarg.0 
+	IL_0023:  ldfld class [System.DirectoryServices]System.DirectoryServices.DirectoryEntry UserInfo.Services.LdapQuery::entry
+	IL_0028:  ldc.i4.1 
+	IL_0029:  callvirt instance void class [System.DirectoryServices]System.DirectoryServices.DirectoryEntry::set_AuthenticationType(valuetype [System.DirectoryServices]System.DirectoryServices.AuthenticationTypes)
+	IL_002e:  ldarg.0 
+	IL_002f:  ldarg.0 
+	IL_0030:  ldfld class [System.DirectoryServices]System.DirectoryServices.DirectoryEntry UserInfo.Services.LdapQuery::entry
+	IL_0035:  newobj instance void class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher::'.ctor'(class [System.DirectoryServices]System.DirectoryServices.DirectoryEntry)
+	IL_003a:  stfld class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher UserInfo.Services.LdapQuery::ds
+	IL_003f:  ret 
+    } // end of method LdapQuery::.ctor
+
+    // method line 19
+    .method public hidebysig 
+           instance default void query (string first, string last, [opt] bool verbose)  cil managed 
+    {
+	.param [3] = bool(false)
+        // Method begins at RVA 0x21dc
+	// Code size 391 (0x187)
+	.maxstack 4
+	.locals init (
+		string	V_0,
+		class [System.DirectoryServices]System.DirectoryServices.SearchResultCollection	V_1,
+		string	V_2,
+		int32	V_3,
+		class [mscorlib]System.Collections.IEnumerator	V_4,
+		class [mscorlib]System.IDisposable	V_5,
+		class [mscorlib]System.Exception	V_6)
+	.try { // 1
+	  IL_0000:  ldarg.1 
+	  IL_0001:  brtrue.s IL_0015
+
+	  IL_0003:  ldarg.2 
+	  IL_0004:  brtrue.s IL_0015
+
+	  IL_0006:  ldstr "[-] At least one of -first or -last is required."
+	  IL_000b:  call void class [mscorlib]System.Console::WriteLine(string)
+	  IL_0010:  leave IL_0186
+
+	  IL_0015:  ldarg.2 
+	  IL_0016:  brtrue.s IL_002b
+
+	  IL_0018:  ldstr "(givenName="
+	  IL_001d:  ldarg.1 
+	  IL_001e:  ldstr ")"
+	  IL_0023:  call string string::Concat(string, string, string)
+	  IL_0028:  stloc.0 
+	  IL_0029:  br.s IL_006d
+
+	  IL_002b:  ldarg.1 
+	  IL_002c:  brtrue.s IL_0041
+
+	  IL_002e:  ldstr "(sn="
+	  IL_0033:  ldarg.2 
+	  IL_0034:  ldstr ")"
+	  IL_0039:  call string string::Concat(string, string, string)
+	  IL_003e:  stloc.0 
+	  IL_003f:  br.s IL_006d
+
+	  IL_0041:  ldc.i4.5 
+	  IL_0042:  newarr [mscorlib]System.String
+	  IL_0047:  dup 
+	  IL_0048:  ldc.i4.0 
+	  IL_0049:  ldstr "(&(givenName="
+	  IL_004e:  stelem.ref 
+	  IL_004f:  dup 
+	  IL_0050:  ldc.i4.1 
+	  IL_0051:  ldarg.1 
+	  IL_0052:  stelem.ref 
+	  IL_0053:  dup 
+	  IL_0054:  ldc.i4.2 
+	  IL_0055:  ldstr ")(sn="
+	  IL_005a:  stelem.ref 
+	  IL_005b:  dup 
+	  IL_005c:  ldc.i4.3 
+	  IL_005d:  ldarg.2 
+	  IL_005e:  stelem.ref 
+	  IL_005f:  dup 
+	  IL_0060:  ldc.i4.4 
+	  IL_0061:  ldstr "))"
+	  IL_0066:  stelem.ref 
+	  IL_0067:  call string string::Concat(string[])
+	  IL_006c:  stloc.0 
+	  IL_006d:  ldarg.3 
+	  IL_006e:  brfalse.s IL_0080
+
+	  IL_0070:  ldstr "[*] LDAP query to use: "
+	  IL_0075:  ldloc.0 
+	  IL_0076:  call string string::Concat(string, string)
+	  IL_007b:  call void class [mscorlib]System.Console::WriteLine(string)
+	  IL_0080:  ldarg.0 
+	  IL_0081:  ldfld class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher UserInfo.Services.LdapQuery::ds
+	  IL_0086:  ldloc.0 
+	  IL_0087:  callvirt instance void class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher::set_Filter(string)
+	  IL_008c:  ldarg.0 
+	  IL_008d:  ldfld class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher UserInfo.Services.LdapQuery::ds
+	  IL_0092:  callvirt instance class [System]System.Collections.Specialized.StringCollection class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher::get_PropertiesToLoad()
+	  IL_0097:  ldstr "sAMAccountName"
+	  IL_009c:  callvirt instance int32 class [System]System.Collections.Specialized.StringCollection::Add(string)
+	  IL_00a1:  pop 
+	  IL_00a2:  ldarg.0 
+	  IL_00a3:  ldfld class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher UserInfo.Services.LdapQuery::ds
+	  IL_00a8:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.SearchResultCollection class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher::FindAll()
+	  IL_00ad:  stloc.1 
+	  IL_00ae:  ldloc.1 
+	  IL_00af:  callvirt instance int32 class [System.DirectoryServices]System.DirectoryServices.SearchResultCollection::get_Count()
+	  IL_00b4:  brtrue.s IL_00c5
+
+	  IL_00b6:  ldstr "[-] No users identified with that query."
+	  IL_00bb:  call void class [mscorlib]System.Console::WriteLine(string)
+	  IL_00c0:  leave IL_0186
+
+	  IL_00c5:  ldarg.3 
+	  IL_00c6:  brfalse.s IL_010d
+
+	  IL_00c8:  ldstr "[+] Found "
+	  IL_00cd:  ldloc.1 
+	  IL_00ce:  callvirt instance int32 class [System.DirectoryServices]System.DirectoryServices.SearchResultCollection::get_Count()
+	  IL_00d3:  stloc.3 
+	  IL_00d4:  ldloca.s 3
+	  IL_00d6:  call instance string int32::ToString()
+	  IL_00db:  ldstr " result"
+	  IL_00e0:  call string string::Concat(string, string, string)
+	  IL_00e5:  stloc.2 
+	  IL_00e6:  ldloc.1 
+	  IL_00e7:  callvirt instance int32 class [System.DirectoryServices]System.DirectoryServices.SearchResultCollection::get_Count()
+	  IL_00ec:  ldc.i4.1 
+	  IL_00ed:  ble.s IL_00fb
+
+	  IL_00ef:  ldloc.2 
+	  IL_00f0:  ldstr "s"
+	  IL_00f5:  call string string::Concat(string, string)
+	  IL_00fa:  stloc.2 
+	  IL_00fb:  ldloc.2 
+	  IL_00fc:  ldstr ":"
+	  IL_0101:  call string string::Concat(string, string)
+	  IL_0106:  stloc.2 
+	  IL_0107:  ldloc.2 
+	  IL_0108:  call void class [mscorlib]System.Console::WriteLine(string)
+	  IL_010d:  ldloc.1 
+	  IL_010e:  callvirt instance class [mscorlib]System.Collections.IEnumerator class [System.DirectoryServices]System.DirectoryServices.SearchResultCollection::GetEnumerator()
+	  IL_0113:  stloc.s 4
+	  .try { // 0
+	    IL_0115:  br.s IL_014a
+
+	    IL_0117:  ldloc.s 4
+	    IL_0119:  callvirt instance object class [mscorlib]System.Collections.IEnumerator::get_Current()
+	    IL_011e:  castclass [System.DirectoryServices]System.DirectoryServices.SearchResult
+	    IL_0123:  ldarg.3 
+	    IL_0124:  brfalse.s IL_0130
+
+	    IL_0126:  ldstr "       "
+	    IL_012b:  call void class [mscorlib]System.Console::Write(string)
+	    IL_0130:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection class [System.DirectoryServices]System.DirectoryServices.SearchResult::get_Properties()
+	    IL_0135:  ldstr "sAMAccountName"
+	    IL_013a:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyValueCollection class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection::get_Item(string)
+	    IL_013f:  ldc.i4.0 
+	    IL_0140:  callvirt instance object class [System.DirectoryServices]System.DirectoryServices.ResultPropertyValueCollection::get_Item(int32)
+	    IL_0145:  call void class [mscorlib]System.Console::WriteLine(object)
+	    IL_014a:  ldloc.s 4
+	    IL_014c:  callvirt instance bool class [mscorlib]System.Collections.IEnumerator::MoveNext()
+	    IL_0151:  brtrue.s IL_0117
+
+	    IL_0153:  leave.s IL_016a
+
+	  } // end .try 0
+	  finally  { // 0
+	    IL_0155:  ldloc.s 4
+	    IL_0157:  isinst [mscorlib]System.IDisposable
+	    IL_015c:  stloc.s 5
+	    IL_015e:  ldloc.s 5
+	    IL_0160:  brfalse.s IL_0169
+
+	    IL_0162:  ldloc.s 5
+	    IL_0164:  callvirt instance void class [mscorlib]System.IDisposable::Dispose()
+	    IL_0169:  endfinally 
+	  } // end handler 0
+	  IL_016a:  leave.s IL_0186
+
+	} // end .try 1
+	catch class [mscorlib]System.Exception { // 1
+	  IL_016c:  stloc.s 6
+	  IL_016e:  ldstr "[-] Exception: "
+	  IL_0173:  ldloc.s 6
+	  IL_0175:  callvirt instance string class [mscorlib]System.Exception::get_Message()
+	  IL_017a:  call string string::Concat(string, string)
+	  IL_017f:  call void class [mscorlib]System.Console::WriteLine(string)
+	  IL_0184:  leave.s IL_0186
+
+	} // end handler 1
+	IL_0186:  ret 
+    } // end of method LdapQuery::query
+
+    // method line 20
+    .method public hidebysig 
+           instance default void printUser (string username, [opt] bool verbose)  cil managed 
+    {
+	.param [2] = bool(false)
+        // Method begins at RVA 0x23a4
+	// Code size 511 (0x1ff)
+	.maxstack 3
+	.locals init (
+		class [System.DirectoryServices]System.DirectoryServices.SearchResult	V_0,
+		valuetype [mscorlib]System.DateTime	V_1,
+		class [mscorlib]System.Exception	V_2)
+	.try { // 0
+	  IL_0000:  ldarg.2 
+	  IL_0001:  brfalse.s IL_0013
+
+	  IL_0003:  ldstr "[*] Getting data for "
+	  IL_0008:  ldarg.1 
+	  IL_0009:  call string string::Concat(string, string)
+	  IL_000e:  call void class [mscorlib]System.Console::WriteLine(string)
+	  IL_0013:  ldarg.0 
+	  IL_0014:  ldfld class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher UserInfo.Services.LdapQuery::ds
+	  IL_0019:  ldstr "sAMAccountName="
+	  IL_001e:  ldarg.1 
+	  IL_001f:  call string string::Concat(string, string)
+	  IL_0024:  callvirt instance void class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher::set_Filter(string)
+	  IL_0029:  ldarg.0 
+	  IL_002a:  ldfld class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher UserInfo.Services.LdapQuery::ds
+	  IL_002f:  callvirt instance class [System]System.Collections.Specialized.StringCollection class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher::get_PropertiesToLoad()
+	  IL_0034:  ldstr "pwdLastSet"
+	  IL_0039:  callvirt instance int32 class [System]System.Collections.Specialized.StringCollection::Add(string)
+	  IL_003e:  pop 
+	  IL_003f:  ldarg.0 
+	  IL_0040:  ldfld class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher UserInfo.Services.LdapQuery::ds
+	  IL_0045:  callvirt instance class [System]System.Collections.Specialized.StringCollection class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher::get_PropertiesToLoad()
+	  IL_004a:  ldstr "lastLogon"
+	  IL_004f:  callvirt instance int32 class [System]System.Collections.Specialized.StringCollection::Add(string)
+	  IL_0054:  pop 
+	  IL_0055:  ldarg.0 
+	  IL_0056:  ldfld class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher UserInfo.Services.LdapQuery::ds
+	  IL_005b:  callvirt instance class [System]System.Collections.Specialized.StringCollection class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher::get_PropertiesToLoad()
+	  IL_0060:  ldstr "givenName"
+	  IL_0065:  callvirt instance int32 class [System]System.Collections.Specialized.StringCollection::Add(string)
+	  IL_006a:  pop 
+	  IL_006b:  ldarg.0 
+	  IL_006c:  ldfld class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher UserInfo.Services.LdapQuery::ds
+	  IL_0071:  callvirt instance class [System]System.Collections.Specialized.StringCollection class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher::get_PropertiesToLoad()
+	  IL_0076:  ldstr "sn"
+	  IL_007b:  callvirt instance int32 class [System]System.Collections.Specialized.StringCollection::Add(string)
+	  IL_0080:  pop 
+	  IL_0081:  ldarg.0 
+	  IL_0082:  ldfld class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher UserInfo.Services.LdapQuery::ds
+	  IL_0087:  callvirt instance class [System]System.Collections.Specialized.StringCollection class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher::get_PropertiesToLoad()
+	  IL_008c:  ldstr "mail"
+	  IL_0091:  callvirt instance int32 class [System]System.Collections.Specialized.StringCollection::Add(string)
+	  IL_0096:  pop 
+	  IL_0097:  ldarg.0 
+	  IL_0098:  ldfld class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher UserInfo.Services.LdapQuery::ds
+	  IL_009d:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.SearchResult class [System.DirectoryServices]System.DirectoryServices.DirectorySearcher::FindOne()
+	  IL_00a2:  stloc.0 
+	  IL_00a3:  ldloc.0 
+	  IL_00a4:  brtrue.s IL_00c0
+
+	  IL_00a6:  ldstr "[-] Unable to locate "
+	  IL_00ab:  ldarg.1 
+	  IL_00ac:  ldstr ". Please try the find command to get the user's username."
+	  IL_00b1:  call string string::Concat(string, string, string)
+	  IL_00b6:  call void class [mscorlib]System.Console::WriteLine(string)
+	  IL_00bb:  leave IL_01fe
+
+	  IL_00c0:  ldloc.0 
+	  IL_00c1:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection class [System.DirectoryServices]System.DirectoryServices.SearchResult::get_Properties()
+	  IL_00c6:  ldstr "givenName"
+	  IL_00cb:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyValueCollection class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection::get_Item(string)
+	  IL_00d0:  callvirt instance int32 class [mscorlib]System.Collections.ReadOnlyCollectionBase::get_Count()
+	  IL_00d5:  ldc.i4.0 
+	  IL_00d6:  ble.s IL_0109
+
+	  IL_00d8:  ldstr "First Name:           "
+	  IL_00dd:  ldloc.0 
+	  IL_00de:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection class [System.DirectoryServices]System.DirectoryServices.SearchResult::get_Properties()
+	  IL_00e3:  ldstr "givenName"
+	  IL_00e8:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyValueCollection class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection::get_Item(string)
+	  IL_00ed:  ldc.i4.0 
+	  IL_00ee:  callvirt instance object class [System.DirectoryServices]System.DirectoryServices.ResultPropertyValueCollection::get_Item(int32)
+	  IL_00f3:  dup 
+	  IL_00f4:  brtrue.s IL_00fa
+
+	  IL_00f6:  pop 
+	  IL_00f7:  ldnull 
+	  IL_00f8:  br.s IL_00ff
+
+	  IL_00fa:  callvirt instance string object::ToString()
+	  IL_00ff:  call string string::Concat(string, string)
+	  IL_0104:  call void class [mscorlib]System.Console::WriteLine(string)
+	  IL_0109:  ldloc.0 
+	  IL_010a:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection class [System.DirectoryServices]System.DirectoryServices.SearchResult::get_Properties()
+	  IL_010f:  ldstr "sn"
+	  IL_0114:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyValueCollection class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection::get_Item(string)
+	  IL_0119:  callvirt instance int32 class [mscorlib]System.Collections.ReadOnlyCollectionBase::get_Count()
+	  IL_011e:  ldc.i4.0 
+	  IL_011f:  ble.s IL_0152
+
+	  IL_0121:  ldstr "Last Name:            "
+	  IL_0126:  ldloc.0 
+	  IL_0127:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection class [System.DirectoryServices]System.DirectoryServices.SearchResult::get_Properties()
+	  IL_012c:  ldstr "sn"
+	  IL_0131:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyValueCollection class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection::get_Item(string)
+	  IL_0136:  ldc.i4.0 
+	  IL_0137:  callvirt instance object class [System.DirectoryServices]System.DirectoryServices.ResultPropertyValueCollection::get_Item(int32)
+	  IL_013c:  dup 
+	  IL_013d:  brtrue.s IL_0143
+
+	  IL_013f:  pop 
+	  IL_0140:  ldnull 
+	  IL_0141:  br.s IL_0148
+
+	  IL_0143:  callvirt instance string object::ToString()
+	  IL_0148:  call string string::Concat(string, string)
+	  IL_014d:  call void class [mscorlib]System.Console::WriteLine(string)
+	  IL_0152:  ldloc.0 
+	  IL_0153:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection class [System.DirectoryServices]System.DirectoryServices.SearchResult::get_Properties()
+	  IL_0158:  ldstr "mail"
+	  IL_015d:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyValueCollection class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection::get_Item(string)
+	  IL_0162:  callvirt instance int32 class [mscorlib]System.Collections.ReadOnlyCollectionBase::get_Count()
+	  IL_0167:  ldc.i4.0 
+	  IL_0168:  ble.s IL_019b
+
+	  IL_016a:  ldstr "Contact:              "
+	  IL_016f:  ldloc.0 
+	  IL_0170:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection class [System.DirectoryServices]System.DirectoryServices.SearchResult::get_Properties()
+	  IL_0175:  ldstr "mail"
+	  IL_017a:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyValueCollection class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection::get_Item(string)
+	  IL_017f:  ldc.i4.0 
+	  IL_0180:  callvirt instance object class [System.DirectoryServices]System.DirectoryServices.ResultPropertyValueCollection::get_Item(int32)
+	  IL_0185:  dup 
+	  IL_0186:  brtrue.s IL_018c
+
+	  IL_0188:  pop 
+	  IL_0189:  ldnull 
+	  IL_018a:  br.s IL_0191
+
+	  IL_018c:  callvirt instance string object::ToString()
+	  IL_0191:  call string string::Concat(string, string)
+	  IL_0196:  call void class [mscorlib]System.Console::WriteLine(string)
+	  IL_019b:  ldloc.0 
+	  IL_019c:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection class [System.DirectoryServices]System.DirectoryServices.SearchResult::get_Properties()
+	  IL_01a1:  ldstr "pwdLastSet"
+	  IL_01a6:  callvirt instance bool class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection::Contains(string)
+	  IL_01ab:  brfalse.s IL_01e4
+
+	  IL_01ad:  ldloc.0 
+	  IL_01ae:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection class [System.DirectoryServices]System.DirectoryServices.SearchResult::get_Properties()
+	  IL_01b3:  ldstr "pwdLastSet"
+	  IL_01b8:  callvirt instance class [System.DirectoryServices]System.DirectoryServices.ResultPropertyValueCollection class [System.DirectoryServices]System.DirectoryServices.ResultPropertyCollection::get_Item(string)
+	  IL_01bd:  ldc.i4.0 
+	  IL_01be:  callvirt instance object class [System.DirectoryServices]System.DirectoryServices.ResultPropertyValueCollection::get_Item(int32)
+	  IL_01c3:  unbox.any [mscorlib]System.Int64
+	  IL_01c8:  call valuetype [mscorlib]System.DateTime valuetype [mscorlib]System.DateTime::FromFileTime(int64)
+	  IL_01cd:  stloc.1 
+	  IL_01ce:  ldstr "Last Password Change: "
+	  IL_01d3:  ldloca.s 1
+	  IL_01d5:  call instance string valuetype [mscorlib]System.DateTime::ToString()
+	  IL_01da:  call string string::Concat(string, string)
+	  IL_01df:  call void class [mscorlib]System.Console::WriteLine(string)
+	  IL_01e4:  leave.s IL_01fe
+
+	} // end .try 0
+	catch class [mscorlib]System.Exception { // 0
+	  IL_01e6:  stloc.2 
+	  IL_01e7:  ldstr "[-] Exception: "
+	  IL_01ec:  ldloc.2 
+	  IL_01ed:  callvirt instance string class [mscorlib]System.Exception::get_Message()
+	  IL_01f2:  call string string::Concat(string, string)
+	  IL_01f7:  call void class [mscorlib]System.Console::WriteLine(string)
+	  IL_01fc:  leave.s IL_01fe
+
+	} // end handler 0
+	IL_01fe:  ret 
+    } // end of method LdapQuery::printUser
+
+  } // end of class UserInfo.Services.LdapQuery
+}
+
+.namespace UserInfo.Commands
+{
+  .class public auto ansi beforefieldinit FindUser
+  	extends class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.Command`2<class UserInfo.GlobalOptions,class UserInfo.FindUserOptions>
+  {
+
+    // method line 21
+    .method public hidebysig specialname rtspecialname 
+           instance default void '.ctor' ()  cil managed 
+    {
+        // Method begins at RVA 0x25cc
+	// Code size 7 (0x7)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  call instance void class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.Command`2<class UserInfo.GlobalOptions, class UserInfo.FindUserOptions>::'.ctor'()
+	IL_0006:  ret 
+    } // end of method FindUser::.ctor
+
+    // method line 22
+    .method public virtual hidebysig 
+           instance default void OnConfigure (class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.ICommandConfigurationBuilder builder)  cil managed 
+    {
+        // Method begins at RVA 0x25d4
+	// Code size 23 (0x17)
+	.maxstack 8
+	IL_0000:  ldarg.1 
+	IL_0001:  ldstr "find"
+	IL_0006:  callvirt instance class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.ICommandConfigurationBuilder class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.ICommandConfigurationBuilder::Name(string)
+	IL_000b:  ldstr "Find a user"
+	IL_0010:  callvirt instance class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.ICommandConfigurationBuilder class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.ICommandConfigurationBuilder::Description(string)
+	IL_0015:  pop 
+	IL_0016:  ret 
+    } // end of method FindUser::OnConfigure
+
+    // method line 23
+    .method public virtual hidebysig 
+           instance default class [mscorlib]System.Threading.Tasks.Task OnExecuteAsync (class UserInfo.GlobalOptions options, class UserInfo.FindUserOptions commandOptions, valuetype [mscorlib]System.Threading.CancellationToken cancellationToken)  cil managed 
+    {
+        .custom instance void class [mscorlib]System.Runtime.CompilerServices.AsyncStateMachineAttribute::'.ctor'(class [mscorlib]System.Type) =  (
+		01 00 2F 55 73 65 72 49 6E 66 6F 2E 43 6F 6D 6D   // ../UserInfo.Comm
+		61 6E 64 73 2E 46 69 6E 64 55 73 65 72 2B 3C 4F   // ands.FindUser+<O
+		6E 45 78 65 63 75 74 65 41 73 79 6E 63 3E 64 5F   // nExecuteAsync>d_
+		5F 32 00 00                                     ) // _2..
+
+        // Method begins at RVA 0x25ec
+	// Code size 63 (0x3f)
+	.maxstack 2
+	.locals init (
+		valuetype UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'	V_0)
+	IL_0000:  ldloca.s 0
+	IL_0002:  call valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create()
+	IL_0007:  stfld valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'::'<>t__builder'
+	IL_000c:  ldloca.s 0
+	IL_000e:  ldarg.1 
+	IL_000f:  stfld class UserInfo.GlobalOptions UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'::options
+	IL_0014:  ldloca.s 0
+	IL_0016:  ldarg.2 
+	IL_0017:  stfld class UserInfo.FindUserOptions UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'::commandOptions
+	IL_001c:  ldloca.s 0
+	IL_001e:  ldc.i4.m1 
+	IL_001f:  stfld int32 UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'::'<>1__state'
+	IL_0024:  ldloca.s 0
+	IL_0026:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'::'<>t__builder'
+	IL_002b:  ldloca.s 0
+	IL_002d:  call instance void valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<valuetype UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'> ([out] !!0&)
+	IL_0032:  ldloca.s 0
+	IL_0034:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'::'<>t__builder'
+	IL_0039:  call instance class [mscorlib]System.Threading.Tasks.Task valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task()
+	IL_003e:  ret 
+    } // end of method FindUser::OnExecuteAsync
+
+  .class nested private auto ansi sealed beforefieldinit '<OnExecuteAsync>d__2'
+  	extends [mscorlib]System.ValueType
+  	implements [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine  {
+    .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+    .field  public  int32 '<>1__state'
+    .field  public  valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder '<>t__builder'
+    .field  public  class UserInfo.FindUserOptions commandOptions
+    .field  public  class UserInfo.GlobalOptions options
+
+    // method line 29
+    .method private final virtual hidebysig newslot 
+           instance default void MoveNext ()  cil managed 
+    {
+        // Method begins at RVA 0x278c
+	.override class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine::MoveNext
+	// Code size 88 (0x58)
+	.maxstack 4
+	.locals init (
+		class [mscorlib]System.Exception	V_0)
+	.try { // 0
+	  IL_0000:  newobj instance void class UserInfo.Services.LdapQuery::'.ctor'()
+	  IL_0005:  ldarg.0 
+	  IL_0006:  ldfld class UserInfo.FindUserOptions UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'::commandOptions
+	  IL_000b:  callvirt instance string class UserInfo.FindUserOptions::get_FirstName()
+	  IL_0010:  ldarg.0 
+	  IL_0011:  ldfld class UserInfo.FindUserOptions UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'::commandOptions
+	  IL_0016:  callvirt instance string class UserInfo.FindUserOptions::get_LastName()
+	  IL_001b:  ldarg.0 
+	  IL_001c:  ldfld class UserInfo.GlobalOptions UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'::options
+	  IL_0021:  callvirt instance bool class UserInfo.GlobalOptions::get_Verbose()
+	  IL_0026:  callvirt instance void class UserInfo.Services.LdapQuery::query(string, string, bool)
+	  IL_002b:  leave.s IL_0044
+
+	} // end .try 0
+	catch class [mscorlib]System.Exception { // 0
+	  IL_002d:  stloc.0 
+	  IL_002e:  ldarg.0 
+	  IL_002f:  ldc.i4.s 0xfffffffe
+	  IL_0031:  stfld int32 UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'::'<>1__state'
+	  IL_0036:  ldarg.0 
+	  IL_0037:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'::'<>t__builder'
+	  IL_003c:  ldloc.0 
+	  IL_003d:  call instance void valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException(class [mscorlib]System.Exception)
+	  IL_0042:  leave.s IL_0057
+
+	} // end handler 0
+	IL_0044:  ldarg.0 
+	IL_0045:  ldc.i4.s 0xfffffffe
+	IL_0047:  stfld int32 UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'::'<>1__state'
+	IL_004c:  ldarg.0 
+	IL_004d:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'::'<>t__builder'
+	IL_0052:  call instance void valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult()
+	IL_0057:  ret 
+    } // end of method <OnExecuteAsync>d__2::MoveNext
+
+    // method line 30
+    .method private final virtual hidebysig newslot 
+           instance default void SetStateMachine (class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine stateMachine)  cil managed 
+    {
+        .custom instance void class [mscorlib]System.Diagnostics.DebuggerHiddenAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+        // Method begins at RVA 0x2800
+	.override class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine::SetStateMachine
+	// Code size 13 (0xd)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Commands.FindUser/'<OnExecuteAsync>d__2'::'<>t__builder'
+	IL_0006:  ldarg.1 
+	IL_0007:  call instance void valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetStateMachine(class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine)
+	IL_000c:  ret 
+    } // end of method <OnExecuteAsync>d__2::SetStateMachine
+
+  } // end of class <OnExecuteAsync>d__2
+
+  } // end of class UserInfo.Commands.FindUser
+}
+
+.namespace UserInfo.Commands
+{
+  .class public auto ansi beforefieldinit GetUser
+  	extends class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.Command`2<class UserInfo.GlobalOptions,class UserInfo.GetUserOptions>
+  {
+
+    // method line 24
+    .method public hidebysig specialname rtspecialname 
+           instance default void '.ctor' ()  cil managed 
+    {
+        // Method begins at RVA 0x2637
+	// Code size 7 (0x7)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  call instance void class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.Command`2<class UserInfo.GlobalOptions, class UserInfo.GetUserOptions>::'.ctor'()
+	IL_0006:  ret 
+    } // end of method GetUser::.ctor
+
+    // method line 25
+    .method public virtual hidebysig 
+           instance default void OnConfigure (class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.ICommandConfigurationBuilder builder)  cil managed 
+    {
+        // Method begins at RVA 0x263f
+	// Code size 23 (0x17)
+	.maxstack 8
+	IL_0000:  ldarg.1 
+	IL_0001:  ldstr "user"
+	IL_0006:  callvirt instance class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.ICommandConfigurationBuilder class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.ICommandConfigurationBuilder::Name(string)
+	IL_000b:  ldstr "Get information about a user"
+	IL_0010:  callvirt instance class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.ICommandConfigurationBuilder class [CommandLineParser]MatthiWare.CommandLine.Abstractions.Command.ICommandConfigurationBuilder::Description(string)
+	IL_0015:  pop 
+	IL_0016:  ret 
+    } // end of method GetUser::OnConfigure
+
+    // method line 26
+    .method public virtual hidebysig 
+           instance default class [mscorlib]System.Threading.Tasks.Task OnExecuteAsync (class UserInfo.GlobalOptions options, class UserInfo.GetUserOptions commandOptions, valuetype [mscorlib]System.Threading.CancellationToken cancellationToken)  cil managed 
+    {
+        .custom instance void class [mscorlib]System.Runtime.CompilerServices.AsyncStateMachineAttribute::'.ctor'(class [mscorlib]System.Type) =  (
+		01 00 2E 55 73 65 72 49 6E 66 6F 2E 43 6F 6D 6D   // ...UserInfo.Comm
+		61 6E 64 73 2E 47 65 74 55 73 65 72 2B 3C 4F 6E   // ands.GetUser+<On
+		45 78 65 63 75 74 65 41 73 79 6E 63 3E 64 5F 5F   // ExecuteAsync>d__
+		32 00 00                                        ) // 2..
+
+        // Method begins at RVA 0x2658
+	// Code size 63 (0x3f)
+	.maxstack 2
+	.locals init (
+		valuetype UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'	V_0)
+	IL_0000:  ldloca.s 0
+	IL_0002:  call valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Create()
+	IL_0007:  stfld valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'::'<>t__builder'
+	IL_000c:  ldloca.s 0
+	IL_000e:  ldarg.1 
+	IL_000f:  stfld class UserInfo.GlobalOptions UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'::options
+	IL_0014:  ldloca.s 0
+	IL_0016:  ldarg.2 
+	IL_0017:  stfld class UserInfo.GetUserOptions UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'::commandOptions
+	IL_001c:  ldloca.s 0
+	IL_001e:  ldc.i4.m1 
+	IL_001f:  stfld int32 UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'::'<>1__state'
+	IL_0024:  ldloca.s 0
+	IL_0026:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'::'<>t__builder'
+	IL_002b:  ldloca.s 0
+	IL_002d:  call instance void valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<valuetype UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'> ([out] !!0&)
+	IL_0032:  ldloca.s 0
+	IL_0034:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'::'<>t__builder'
+	IL_0039:  call instance class [mscorlib]System.Threading.Tasks.Task valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::get_Task()
+	IL_003e:  ret 
+    } // end of method GetUser::OnExecuteAsync
+
+  .class nested private auto ansi sealed beforefieldinit '<OnExecuteAsync>d__2'
+  	extends [mscorlib]System.ValueType
+  	implements [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine  {
+    .custom instance void class [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+    .field  public  int32 '<>1__state'
+    .field  public  valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder '<>t__builder'
+    .field  public  class UserInfo.GetUserOptions commandOptions
+    .field  public  class UserInfo.GlobalOptions options
+
+    // method line 31
+    .method private final virtual hidebysig newslot 
+           instance default void MoveNext ()  cil managed 
+    {
+        // Method begins at RVA 0x2810
+	.override class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine::MoveNext
+	// Code size 77 (0x4d)
+	.maxstack 3
+	.locals init (
+		class [mscorlib]System.Exception	V_0)
+	.try { // 0
+	  IL_0000:  newobj instance void class UserInfo.Services.LdapQuery::'.ctor'()
+	  IL_0005:  ldarg.0 
+	  IL_0006:  ldfld class UserInfo.GetUserOptions UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'::commandOptions
+	  IL_000b:  callvirt instance string class UserInfo.GetUserOptions::get_UserName()
+	  IL_0010:  ldarg.0 
+	  IL_0011:  ldfld class UserInfo.GlobalOptions UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'::options
+	  IL_0016:  callvirt instance bool class UserInfo.GlobalOptions::get_Verbose()
+	  IL_001b:  callvirt instance void class UserInfo.Services.LdapQuery::printUser(string, bool)
+	  IL_0020:  leave.s IL_0039
+
+	} // end .try 0
+	catch class [mscorlib]System.Exception { // 0
+	  IL_0022:  stloc.0 
+	  IL_0023:  ldarg.0 
+	  IL_0024:  ldc.i4.s 0xfffffffe
+	  IL_0026:  stfld int32 UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'::'<>1__state'
+	  IL_002b:  ldarg.0 
+	  IL_002c:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'::'<>t__builder'
+	  IL_0031:  ldloc.0 
+	  IL_0032:  call instance void valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetException(class [mscorlib]System.Exception)
+	  IL_0037:  leave.s IL_004c
+
+	} // end handler 0
+	IL_0039:  ldarg.0 
+	IL_003a:  ldc.i4.s 0xfffffffe
+	IL_003c:  stfld int32 UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'::'<>1__state'
+	IL_0041:  ldarg.0 
+	IL_0042:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'::'<>t__builder'
+	IL_0047:  call instance void valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult()
+	IL_004c:  ret 
+    } // end of method <OnExecuteAsync>d__2::MoveNext
+
+    // method line 32
+    .method private final virtual hidebysig newslot 
+           instance default void SetStateMachine (class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine stateMachine)  cil managed 
+    {
+        .custom instance void class [mscorlib]System.Diagnostics.DebuggerHiddenAttribute::'.ctor'() =  (01 00 00 00 ) // ....
+
+        // Method begins at RVA 0x287c
+	.override class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine::SetStateMachine
+	// Code size 13 (0xd)
+	.maxstack 8
+	IL_0000:  ldarg.0 
+	IL_0001:  ldflda valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder UserInfo.Commands.GetUser/'<OnExecuteAsync>d__2'::'<>t__builder'
+	IL_0006:  ldarg.1 
+	IL_0007:  call instance void valuetype [mscorlib]System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetStateMachine(class [mscorlib]System.Runtime.CompilerServices.IAsyncStateMachine)
+	IL_000c:  ret 
+    } // end of method <OnExecuteAsync>d__2::SetStateMachine
+
+  } // end of class <OnExecuteAsync>d__2
+
+  } // end of class UserInfo.Commands.GetUser
+}
+

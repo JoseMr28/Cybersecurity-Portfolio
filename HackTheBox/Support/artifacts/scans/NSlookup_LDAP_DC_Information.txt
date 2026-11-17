@@ -1,0 +1,5 @@
+Server:		10.129.230.181
+Address:	10.129.230.181#53
+
+_ldap._tcp.dc._msdcs.support.htb	service = 0 100 389 dc.support.htb.
+
